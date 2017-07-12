@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-6-22 13:56:57 by Hibernate Tools 5.2.3.Final -->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="mysoulyoga" dynamic-insert="true" dynamic-update="true" mutable="true" name="com.web.soulyogaadmin.entity.Position" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="position">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="departmentId" optimistic-lock="true" type="int" unique="false">
+            <column name="DepartmentID" not-null="true">
+                <comment>Department Id</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="positionName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PositionName">
+                <comment>ְPosition Name</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="createdTime" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="CreatedTime" not-null="true">
+                <comment>CreatedTime</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="modifiedTime" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="ModifiedTime">
+                <comment>ModifiedTime</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="state" optimistic-lock="true" type="int" unique="false">
+            <column name="State" not-null="true">
+                <comment>State</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

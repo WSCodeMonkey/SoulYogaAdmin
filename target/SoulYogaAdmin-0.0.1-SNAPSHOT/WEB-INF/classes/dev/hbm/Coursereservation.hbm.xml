@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-6-22 13:56:57 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="mysoulyoga" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.web.soulyogaadmin.entity.Coursereservation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="coursereservation">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="memberId" optimistic-lock="true" type="int" unique="false">
+            <column name="MemberID" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="courseScheduleId" optimistic-lock="true" type="int" unique="false">
+            <column name="CourseScheduleID" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="teacherName" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="TeacherName" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="courseName" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="CourseName" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="classroomNo" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="ClassroomNo" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="yogaClubName" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="YogaClubName" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="scheduleDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="ScheduleDate" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="startTime" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="StartTime" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="endTime" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="EndTime" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="yogaCushionNo" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="YogaCushionNo" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="status" optimistic-lock="true" type="int" unique="false">
+            <column name="Status" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="createdTime" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="CreatedTime" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="modifiedTime" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="ModifiedTime">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="state" optimistic-lock="true" type="int" unique="false">
+            <column name="State" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

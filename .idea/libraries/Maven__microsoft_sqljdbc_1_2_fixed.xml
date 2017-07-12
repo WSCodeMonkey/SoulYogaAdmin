@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: microsoft:sqljdbc:1.2-fixed">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/microsoft/sqljdbc/1.2-fixed/sqljdbc-1.2-fixed.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/microsoft/sqljdbc/1.2-fixed/sqljdbc-1.2-fixed-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/microsoft/sqljdbc/1.2-fixed/sqljdbc-1.2-fixed-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

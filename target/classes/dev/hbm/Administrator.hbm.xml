@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 21, 2016 3:12:00 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.web.soulyogaadmin.entity.Administrator" table="Administrator" schema="dbo">
+        <id name="adminId" type="int">
+            <column name="admin_id" />
+            <generator class="identity" />
+        </id>
+        <property name="adminName" type="string">
+            <column name="admin_name" length="50" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="256" />
+        </property>
+        <property name="adminStatus" type="java.lang.Integer">
+            <column name="admin_status" />
+        </property>
+    </class>
+</hibernate-mapping>

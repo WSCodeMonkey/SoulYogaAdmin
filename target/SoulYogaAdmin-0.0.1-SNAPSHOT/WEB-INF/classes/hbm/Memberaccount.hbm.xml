@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 26, 2017 9:32:22 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.web.soulyogaadmin.entity.Memberaccount" table="MEMBERACCOUNT">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="memberId" type="int">
+            <column name="MEMBERID" />
+        </property>
+        <property name="nickName" type="java.lang.String">
+            <column name="NICKNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="fingerprint" type="binary">  
+            <column name="FINGERPRINT" />  
+        </property> 
+        <property name="createdTime" type="java.util.Date">
+            <column name="CREATEDTIME" />
+        </property>
+        <property name="modifiedTime" type="java.util.Date">
+            <column name="MODIFIEDTIME" />
+        </property>
+        <property name="state" type="int">
+            <column name="STATE" />
+        </property>
+    </class>
+</hibernate-mapping>

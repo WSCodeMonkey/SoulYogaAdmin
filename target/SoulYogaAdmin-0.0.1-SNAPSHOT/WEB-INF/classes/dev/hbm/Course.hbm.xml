@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.web.soulyogaadmin.entity.CourseEntry" table="course" dynamic-insert="true" dynamic-update="true">
+        <id name="iD" type="int">
+            <column name="ID" />
+             <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="1000" />
+        </property>
+        <property name="courseCategoryID" type="int">
+            <column name="CourseCategoryID" />
+        </property>
+        <property name="yogaClubID" type="int">
+            <column name="YogaClubID" />
+        </property>
+        
+        <property name="introduction" type="string">
+            <column name="Introduction" length="2000" />
+        </property>
+        <property name="point" type="int">
+            <column name="Point" length="20" />
+        </property>
+        <property name="createdTime" type="date">
+            <column name="CreatedTime" length="10" />
+        </property>
+        <property name="modifiedTime" type="date">
+            <column name="ModifiedTime" length="10" />
+        </property>
+        <property name="state" type="int">
+            <column name="State" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>
+
