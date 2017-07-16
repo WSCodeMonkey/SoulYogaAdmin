@@ -1,8 +1,12 @@
 package com.web.soulyogaadmin.employee.service.impl;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +38,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	private static String className = EmployeeServiceImpl.class.getName();
 
 	private static Logger logger = Logger.getLogger(className);
-
+	
 	@Override
 	public boolean addEmployee(EmployeeView employeeView) {
 		logger.debug("Entry class EmployeeServiceImpl method addEmployee");
@@ -42,60 +46,41 @@ public class EmployeeServiceImpl implements IEmployeeService {
 		String identityId = employeeView.getIdentityId();
 		Employee employeeFromDB = employeeDao.findEmployeeByIdentityId(identityId);
 
-		// Initialize and set Employee object
-		Employee employee = setEmployee(employeeView);
-		int isTeacher = employee.getIsTeacher();
-		
-		// Initialize and set EmployeeAccount object
-		EmployeeAccount employeeAccount = setEmployeeAccount(employeeView);
-
 		if (employeeFromDB == null) {
+			Employee employee = setEmployee(employeeView, new Employee());
+			int isTeacher = employee.getIsTeacher();
+			
 			int employeeId = employeeDao.addEmployee(employee);
 
+			EmployeeAccount employeeAccount = setEmployeeAccount(employeeView, new EmployeeAccount());
 			employeeAccount.setEmployeeId(employeeId);
 			employeeDao.addEmployeeAccount(employeeAccount);
 
 			if (isTeacher == 1) {
-
 				// Initialize and set Teacher object
-				Teacher teacher = new Teacher();
-				teacher.setIntroduction(employeeView.getIntroduction());
-				teacher.setCourseCategoryIds(employeeView.getCourseCategoryIds().replace(", ", ","));
+				Teacher teacher = setTeacher(employeeView, new Teacher());
 				teacher.setEmployeeId(employeeId);
 				employeeDao.addTeacher(teacher);
 			}
 
 		} else if (employeeFromDB.getState() == 1) {
-			int employeeId = employeeFromDB.getId();
-
 			// update Employee
-			employee.setId(employeeId);
+			Employee employee = setEmployee(employeeView, employeeFromDB);
+			int isTeacher = employee.getIsTeacher();
 			employee.setModifiedTime(new Date());
 			employee.setState(0);
 			employeeDao.updEmployee(employee);
 
 			// update EmployeeAccount
-			employeeAccount.setEmployeeId(employeeId);
-			employeeAccount.setState(0);
+			int employeeId = employeeFromDB.getId();
+			EmployeeAccount employeeAccountFromDB = employeeDao.findEmployeeAccountByEmployeeId(employeeId);
+			EmployeeAccount employeeAccount = setEmployeeAccount(employeeView, employeeAccountFromDB);
 			employeeAccount.setModifiedTime(new Date());
+			employeeAccount.setState(0);
 			employeeDao.updEmployeeAccount(employeeAccount);
 
 			if (isTeacher == 1) {
-				Teacher teacherFromDB = employeeDao.findTeacherByEmployeeId(employeeId);
-				Teacher teacher = new Teacher();
-				teacher.setIntroduction(employeeView.getIntroduction());
-				teacher.setCourseCategoryIds(employeeView.getCourseCategoryIds().replace(", ", ","));
-				
-				if (UtilValidate.isNotEmpty(teacherFromDB)) {
-					teacher.setEmployeeId(teacherFromDB.getEmployeeId());
-					teacher.setModifiedTime(new Date());
-					teacher.setState(0);
-					employeeDao.updTeacher(teacher);
-				} else {
-					teacher.setEmployeeId(employeeId);
-					employeeDao.addTeacher(teacher);
-				}
-				
+				saveOrUpdateTeacher(employeeView, employeeId);
 			}
 		} else {
 			logger.debug("End class EmployeeServiceImpl method addEmployee");
@@ -109,37 +94,23 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	public boolean updEmployee(EmployeeView employeeView) {
 		logger.debug("Entry class EmployeeServiceImpl method updEmployee");
 		
-		Employee employee = setEmployee(employeeView);
 		Integer employeeId = employeeView.getId();
-		employee.setId(employeeId);
+		Employee employee = setEmployee(employeeView, employeeDao.findEmployeeById(employeeId));
 		employee.setModifiedTime(new Date());
 		employeeDao.updEmployee(employee);
 		
-		EmployeeAccount employeeAccount = setEmployeeAccount(employeeView);
-		employeeAccount.setId(employeeDao.findEmployeeAccountByEmployeeId(employeeId).getId());
+		EmployeeAccount employeeAccount = setEmployeeAccount(employeeView, employeeDao.findEmployeeAccountByEmployeeId(employeeId));
 		employeeAccount.setModifiedTime(new Date());
 		employeeDao.updEmployeeAccount(employeeAccount);
 		
 		if (employee.getIsTeacher() == 1) {
-			Teacher teacherFromDB = employeeDao.findTeacherByEmployeeId(employeeId);
-			Teacher teacher = new Teacher();
-			teacher.setEmployeeId(employeeId);
-			teacher.setIntroduction(employeeView.getIntroduction());
-			teacher.setCourseCategoryIds(employeeView.getCourseCategoryIds().replace(", ", ","));
-			
-			if (UtilValidate.isNotEmpty(teacherFromDB)) {
-				teacher.setModifiedTime(new Date());
-				teacher.setState(0);
-				employeeDao.updTeacher(teacher);
-			} else {
-				employeeDao.addTeacher(teacher);
-			}
+			saveOrUpdateTeacher(employeeView, employeeId);
 		}
 		
 		logger.debug("End class EmployeeServiceImpl method updEmployee");
 		return true;
 	}
-	
+
 	@Override
 	public boolean delEmployee(int employeeId) {
 		logger.debug("Entry class EmployeeServiceImpl method delEmployee");
@@ -158,10 +129,11 @@ public class EmployeeServiceImpl implements IEmployeeService {
 			Teacher teacher = employeeDao.findTeacherByEmployeeId(employeeId);
 			teacher.setModifiedTime(new Date());
 			teacher.setState(1);
+			employeeDao.updTeacher(teacher);
 		}
 		
 		logger.debug("End class EmployeeServiceImpl method delEmployee");
-		return false;
+		return true;
 	}
 
 	@Override
@@ -189,10 +161,63 @@ public class EmployeeServiceImpl implements IEmployeeService {
 		return employeeView;
 	}
 
-	// set Employee by EmployeeView
-	private Employee setEmployee(EmployeeView employeeView) {
-		Employee employee = new Employee();
+	@Override
+	public Map<Integer, String> findAllYogaClub() {
+		logger.debug("Entry class EmployeeServiceImpl method findEmployeeById");
 		
+		Map<Integer, String> yogaclubMap = employeeDao.findAllYogaClub();
+		
+		logger.debug("End class EmployeeServiceImpl method findEmployeeById");
+		return yogaclubMap;
+	}
+
+	@Override
+	public Map<Integer, String> findAllPosition() {
+		logger.debug("Entry class EmployeeServiceImpl method findEmployeeById");
+
+		Map<Integer, String> positionMap = employeeDao.findAllPosition();
+		
+		logger.debug("End class EmployeeServiceImpl method findEmployeeById");
+		return positionMap;
+	}
+
+	@Override
+	public Map<Integer, String> findAllCourseCategory() {
+		logger.debug("Entry class EmployeeServiceImpl method findAllCourseCategory");
+
+		Map<Integer, String> coursecategoryMap = employeeDao.findAllCourseCategory();
+		
+		logger.debug("End class EmployeeServiceImpl method findAllCourseCategory");
+		return coursecategoryMap;
+	}
+	
+	@Override
+	public List<EmployeeView> findEmployeeViaCondition(EmployeeView employeeView) {
+		logger.debug("Entry class EmployeeServiceImpl method findEmployeeById");
+
+		List<EmployeeView> employeeViews = employeeDao.findEmployeeViaCondition(employeeView);
+		
+		logger.debug("Entry class EmployeeServiceImpl method findEmployeeById");
+		return employeeViews;
+	}
+
+	private void saveOrUpdateTeacher(EmployeeView employeeView, Integer employeeId) {
+		Teacher teacherFromDB = employeeDao.findTeacherByEmployeeId(employeeId);
+		if (UtilValidate.isNotEmpty(teacherFromDB)) {
+			Teacher teacher = setTeacher(employeeView, teacherFromDB);
+			teacher.setModifiedTime(new Date());
+			teacher.setState(0);
+			employeeDao.updTeacher(teacher);
+		} else {
+			Teacher teacher = setTeacher(employeeView, new Teacher());
+			teacher.setEmployeeId(employeeId);
+			employeeDao.addTeacher(teacher);
+		}
+	}
+	
+	// set Employee by EmployeeView
+	private Employee setEmployee(EmployeeView employeeView, Employee employee) {
+		employee.setPhoneNo(employeeView.getPhoneNo());
 		int positionId = employeeView.getPositionId();
 		employee.setPositionId(positionId);
 		employee.setSurname(employeeView.getSurname());
@@ -205,18 +230,32 @@ public class EmployeeServiceImpl implements IEmployeeService {
 		employee.setAvatarUrl(employeeView.getAvatarUrl());
 		employee.setYogaClubId(employeeView.getYogaClubId());
 		int isTeacher = 0;
-		if (positionId == 2) { // 设定老师的职位ID
-			isTeacher = 1;
+		InputStream in = EmployeeServiceImpl.class.getClassLoader().getResourceAsStream("tableFieldConfig.properties");
+		Properties properties = new Properties();
+		try {
+			properties.load(in);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String teacherPositionId = properties.getProperty("teacherPositionId");
+		
+		if (UtilValidate.isNotEmpty(teacherPositionId)) {
+			if (positionId == Integer.parseInt(teacherPositionId)) {
+				isTeacher = 1;
+			}
 		}
 		employee.setIsTeacher(isTeacher);
 		
+		try {
+			in.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return employee;
 	}
 	
 	// set EmployeeAccount by EmployeeView
-	private EmployeeAccount setEmployeeAccount(EmployeeView employeeView) {
-		EmployeeAccount employeeAccount = new EmployeeAccount();
-		
+	private EmployeeAccount setEmployeeAccount(EmployeeView employeeView, EmployeeAccount employeeAccount) {
 		employeeAccount.setUserName(employeeView.getFristName() + employeeView.getLastName());
 		String identityId = employeeView.getIdentityId();
 		String initialPwd = identityId.substring(identityId.length() - 6, identityId.length());
@@ -228,6 +267,13 @@ public class EmployeeServiceImpl implements IEmployeeService {
 		}
 		
 		return employeeAccount;
+	}
+
+	// set Teacher by EmployeeView
+	private Teacher setTeacher(EmployeeView employeeView, Teacher teacher) {
+		teacher.setIntroduction(employeeView.getIntroduction());
+		teacher.setCourseCategoryIds(employeeView.getCourseCategoryIds().replace(", ", ","));
+		return teacher;
 	}
 
 }

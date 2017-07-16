@@ -14,6 +14,7 @@ import com.web.soulyogaadmin.course.service.ICourseService;
 import com.web.soulyogaadmin.course.vo.CourseConditionVO;
 import com.web.soulyogaadmin.course.vo.CourseView;
 import com.web.soulyogaadmin.entity.CourseEntry;
+import com.web.soulyogaadmin.entity.Courseattendance;
 import com.web.soulyogaadmin.entity.Coursecategory;
 import com.web.soulyogaadmin.entity.Yogaclub;
 
@@ -97,8 +98,7 @@ public class TestCourse {
 	public void findYogaclubNameById(){
 		Yogaclub y=courseDao.findYogaclubNameById(2);
 		System.out.println("================="+y.getName());
-
-	
 	}
+
 	
 }

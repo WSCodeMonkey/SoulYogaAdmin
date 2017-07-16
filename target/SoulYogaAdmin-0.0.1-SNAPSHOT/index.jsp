@@ -115,6 +115,17 @@
 								<li><a tabindex="-1" href="./showPosition.action">职位管理</a></li>
 
 							</ul></li>
+
+						<li class="dropdown"><a href="#" role="button"
+							class="dropdown-toggle" data-toggle="dropdown">预约管理<i
+								class="caret"></i>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="order/check.jsp">课程CheckIn/Out</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1" href="#">……</a></li>
+
+							</ul></li>
 						<li class="dropdown"><a href="./showDepartment.action"
 							role="button" class="dropdown-toggle" data-toggle="dropdown">产品管理<i
 								class="caret"></i>
@@ -125,16 +136,7 @@
 								<li><a tabindex="-1" href="./showPosition.action"></a></li>
 
 							</ul></li>
-						<li class="dropdown"><a href="#" role="button"
-							class="dropdown-toggle" data-toggle="dropdown">预约管理<i
-								class="caret"></i>
-						</a>
-							<ul class="dropdown-menu">
-								<li><a tabindex="-1" href="order/check.jsp">课程CheckIn/Out</a></li>
-								<li class="divider"></li>
-								<li><a tabindex="-1" href="./addEmployee.action">……</a></li>
 
-							</ul></li>
 
 
 					</ul>

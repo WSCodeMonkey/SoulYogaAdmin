@@ -17,19 +17,18 @@ import com.web.soulyogaadmin.util.Des;
 import com.web.soulyogaadmin.util.Encrypt;
 import com.web.soulyogaadmin.util.UtilValidate;
 
-
 /**
  * EmployeeAccountEntry Dao Implemention
+ * 
  * @author Shawn xiao
  * @version 2017-06-15
  */
-
 
 @Repository("employeeAccountDao")
 public class EmployeeAccountDaoImpl implements IEmployeeAccountDao {
 
 	String strKey = "0002000200020002";
-	
+
 	@Autowired
 	private SessionFactory sessionFactory;
 
@@ -38,11 +37,11 @@ public class EmployeeAccountDaoImpl implements IEmployeeAccountDao {
 	private static String className = EmployeeAccountDaoImpl.class.getName();
 
 	private static Logger logger = Logger.getLogger(className);
-	
+
 	@Override
 	public boolean employeeAccountLogin(String userName, String password) {
-		
-		String hql = "from EmployeeAccount where userName=? and password=? and state=?";  
+
+		String hql = "from EmployeeAccount where userName=? and password=? and state=?";
 
 		Session session = sessionFactory.getCurrentSession();
 
@@ -65,7 +64,7 @@ public class EmployeeAccountDaoImpl implements IEmployeeAccountDao {
 
 	public EmployeeAccount getEmployeeAccount(String userName) {
 
-		String hql = "from EmployeeAccount where adminName=? and adminStatus=?"; 
+		String hql = "from EmployeeAccount where adminName=? and adminStatus=?";
 
 		Session session = sessionFactory.getCurrentSession();
 
@@ -102,8 +101,8 @@ public class EmployeeAccountDaoImpl implements IEmployeeAccountDao {
 		String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		Random random = new Random();
 		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i < length; i++) {			
-			int number =ESAPI.randomizer().getRandomInteger(0, 62);
+		for (int i = 0; i < length; i++) {
+			int number = ESAPI.randomizer().getRandomInteger(0, 62);
 			sb.append(str.charAt(number));
 		}
 		return sb.toString();
@@ -118,10 +117,10 @@ public class EmployeeAccountDaoImpl implements IEmployeeAccountDao {
 			admin.setPassword(Encrypt.e(password));
 			session.merge(admin);
 			return true;
-		}else{
+		} else {
 			return false;
 		}
-		
+
 	};
 
 	public boolean employeeAccountCreateOne(EmployeeAccount employeeAccount) {
@@ -149,6 +148,21 @@ public class EmployeeAccountDaoImpl implements IEmployeeAccountDao {
 		} else {
 			return false;
 		}
+	}
+
+	@Override
+	public Integer findEmployeeAccountPhoneNo(String phoneNo) {
+		logger.info("Entry class EmployeeAccountDaoImpl method findEmployeeAccountPhoneNo");
+
+		String sql = "select id from employee where phoneNo = ?";
+		session = sessionFactory.getCurrentSession();
+		Query query = session.createSQLQuery(sql);
+		query.setString(0, phoneNo);
+		Integer employeeId = (Integer) query.uniqueResult();
+//		System.out.println(employeeId);
+		
+		logger.info("Entry class EmployeeAccountDaoImpl method findEmployeeAccountPhoneNo");
+		return employeeId;
 	}
 
 }

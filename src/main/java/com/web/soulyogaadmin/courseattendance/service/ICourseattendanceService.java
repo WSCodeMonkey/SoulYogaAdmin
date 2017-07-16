@@ -25,7 +25,9 @@ public interface ICourseattendanceService {
 	 */
 	List<CourseattendanceView> queryCheckOutByMember(String mobileNo);
 	
-	void addCheckIn(Courseattendance courseattendance);
+	void addCheckIn(Courseattendance courseattendance,String yogaclubname) throws Exception;
 	
 	String checkEndTime(int courseSheduleId);
+	
+	void addCheckOut(int courseattendanceId,int memberId) throws Exception;
 }

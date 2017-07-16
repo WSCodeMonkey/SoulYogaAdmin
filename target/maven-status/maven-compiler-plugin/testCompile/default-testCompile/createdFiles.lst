@@ -1,0 +1,5 @@
+com/web/soulyogaadmin/courseattendance/test/TestCourseattendance.class
+com/web/soulyogaadmin/member/test/TestMemberService.class
+com/web/soulyogaadmin/classroom/test/testClassroomDao.class
+com/web/soulyogaadmin/course/test/TestCourse.class
+com/web/soulyogaadmin/classroom/test/testYogaclubDao.class

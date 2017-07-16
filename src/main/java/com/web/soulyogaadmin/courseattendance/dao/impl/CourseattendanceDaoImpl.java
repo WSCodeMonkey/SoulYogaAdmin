@@ -46,13 +46,16 @@ public class CourseattendanceDaoImpl implements ICourseattendanceDao {
 		courseattendance.setModifiedTime(new Date());
 		updateCourseattendance(courseattendance);
 	}
-
+/**
+ * 查询所有没有checkOut的记录
+ */
 	@Override
-	public List<Courseattendance>  queryAllCourseattendance() {
+	public List<Courseattendance>  queryAllCourseattendance(int memberId) {
 		List<Courseattendance> list=new ArrayList<Courseattendance>();
 		Session session=sessionFactory.getCurrentSession();
-		String hql="from Courseattendance ca where ca.state=0  ";
+		String hql="from Courseattendance ca where ca.state=0 and ca.checkOutTime=null  and ca.memberId=? ";
 		Query query=session.createQuery(hql);
+		query.setInteger(0, memberId);
 		list=query.list();
 		return list;
 	}
@@ -91,6 +94,20 @@ public class CourseattendanceDaoImpl implements ICourseattendanceDao {
 		Query query=session.createQuery(hql);
 		query.setInteger(0, reservationId);
 		Courseattendance courseattendance=(Courseattendance) query.uniqueResult();
+		return courseattendance;
+	}
+
+	@Override
+	public Coursereservation getCoursereservationByCoursereservationId(int coursereservationId) {
+		Session session=sessionFactory.getCurrentSession();
+		Coursereservation coursereservation=(Coursereservation) session.get(Coursereservation.class, coursereservationId);
+		return coursereservation;
+	}
+
+	@Override
+	public Courseattendance getCourseattendance(int courseattendanceId) {
+		Session session=sessionFactory.getCurrentSession();
+		Courseattendance courseattendance=(Courseattendance) session.get(Courseattendance.class, courseattendanceId);
 		return courseattendance;
 	}
 

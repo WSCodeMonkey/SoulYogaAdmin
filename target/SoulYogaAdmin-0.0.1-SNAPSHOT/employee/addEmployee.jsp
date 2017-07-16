@@ -9,12 +9,29 @@
 	<!-- Bootstrap -->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link href="bootstrap/css/bootstrap-imageupload.min.css" rel="stylesheet" media="screen">
 	<link href="assets/styles.css" rel="stylesheet" media="screen">
 	<script src="vendors/jquery-1.11.2.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/bootstrap-imageupload.min.js"></script>
 	
 	<script type="text/javascript">
-		
+		$(document).ready(function() {
+			$(".imageupload").imageupload();
+			
+			$(".teacherDetail").hide();
+			$("#positionSelector").bind("change", function() {
+				var positionId = $(this).val();
+				if (positionId == "${teacherPositionId}") {
+					$("#image").attr("required", "required");
+					$(".teacherDetail").show();
+				} else {
+					$("#image").removeAttr("required");
+					$(".teacherDetail").hide();
+				}
+			});
+			
+		});
 	</script>
 	
 </head>
@@ -74,44 +91,66 @@
 					<div class="span12">
 						<!-- block -->
 						<div class="block">
+							<div class="navbar navbar-inner block-header">
+								<div class="muted pull-left">新增员工</div>
+							</div>
 							<div class="block-content collapse in">
-								<form action="addEmployee.action" method="post" class="form-horizontal">
+								<form action="addEmployee.action" method="post" enctype="multipart/form-data" class="form-horizontal">
 									<fieldset>
-										<legend>新增员工</legend>
+										<legend>填写员工信息</legend>
 										<div class="control-group">
-											<label class="control-label" for="surname">姓</label>
+											<label class="control-label" for="image">上传头像</label>
 											<div class="controls">
-												<input type="text" id="surname" name="employeeView.surname" placeholder="中文姓氏">
+												<div class="imageupload panel panel-default">
+													<div class="file-tab panel-body">
+														<label class="btn btn-default btn-file">
+															<span>浏览</span> <input id="image" type="file" name="image">
+														</label>
+														<button type="button" class="btn btn-default">移除</button>
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="control-group">
-											<label class="control-label" for="name">名</label>
+											<label class="control-label" for="surname">中文姓</label>
 											<div class="controls">
-												<input type="text" id="name" name="employeeView.name" placeholder="中文名">
+												<input type="text" id="surname" name="employeeView.surname" placeholder="中文姓" required="required">
 											</div>
 										</div>
 										<div class="control-group">
-											<label class="control-label" for="fristName">First Name</label>
+											<label class="control-label" for="name">中文名</label>
 											<div class="controls">
-												<input type="text" id="fristName" name="employeeView.fristName" placeholder="firstname">
+												<input type="text" id="name" name="employeeView.name" placeholder="中文名" required="required">
 											</div>
 										</div>
 										<div class="control-group">
-											<label class="control-label" for="lastName">Last Name</label>
+											<label class="control-label" for="fristName">英文名</label>
 											<div class="controls">
-												<input type="text" id="lastName" name="employeeView.lastName" placeholder="lastname">
+												<input type="text" id="fristName" name="employeeView.fristName" placeholder="英文名" required="required">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="lastName">英文姓</label>
+											<div class="controls">
+												<input type="text" id="lastName" name="employeeView.lastName" placeholder="英文姓" required="required">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="phoneNo">电话号码</label>
+											<div class="controls">
+												<input type="text" id="phoneNo" name="employeeView.phoneNo" placeholder="电话号码" required="required">
 											</div>
 										</div>
 										<div class="control-group">
 											<label class="control-label" for="mail">邮箱</label>
 											<div class="controls">
-												<input type="text" id="mail" name="employeeView.mail" placeholder="邮箱">
+												<input type="email" id="mail" name="employeeView.mail" placeholder="邮箱" required="required">
 											</div>
 										</div>
 										<div class="control-group">
 											<label class="control-label" for="identityId">身份证号</label>
 											<div class="controls">
-												<input type="text" id="identityId" name="employeeView.identityId" placeholder="身份证号">
+												<input type="text" id="identityId" name="employeeView.identityId" placeholder="身份证号" required="required">
 											</div>
 										</div>
 										<div class="control-group">
@@ -129,36 +168,35 @@
 											<label class="control-label">工作分所</label>
 											<div class="controls">
 												<select name="employeeView.yogaClubId">
-													<option value="1">1</option>
+													<option></option>
+													<s:iterator value="yogaclubMap" var="yogaclub">
+														<option value="<s:property value="key"/>"><s:property value="value"/></option>
+													</s:iterator>
 												</select>
 											</div>
 										</div>
 										<div class="control-group">
 											<label class="control-label">职位</label>
 											<div class="controls">
-												<select name="employeeView.positionId">
+												<select id="positionSelector" name="employeeView.positionId">
 													<option></option>
-													<s:iterator value="positionViews" var="positionView">
-														<option value="#positionView.id"><s:property value="#positionView.positionName"/></option>
+													<s:iterator value="positionMap" var="position">
+														<option value="<s:property value="key"/>"><s:property value="value"/></option>
 													</s:iterator>
 												</select>
 											</div>
 										</div>
-										<div class="control-group">
-											<label class="control-label" for="courseCategoryIds">选择老师的课程种类</label>
+										<div class="control-group teacherDetail">
+											<label class="control-label" for="courseCategoryIds">老师的课程种类</label>
 											<div class="controls">
-												<label class="checkbox inline">
-													<input type="checkbox" name="employeeView.courseCategoryIds" id="inlineCheckbox3" value="1">1
-												</label>
-												<label class="checkbox inline">
-													<input type="checkbox" name="employeeView.courseCategoryIds" id="inlineCheckbox3" value="2">2
-												</label>
-												<label class="checkbox inline">
-													<input type="checkbox" name="employeeView.courseCategoryIds" id="inlineCheckbox3" value="3">3
-												</label>
+												<s:iterator value="coursecategoryMap" var="coursecategory">
+													<label class="checkbox inline">
+														<input type="checkbox" name="employeeView.courseCategoryIds" value="<s:property value="key"/>"><s:property value="value"/>
+													</label>
+												</s:iterator>
 											</div>
 										</div>
-										<div class="control-group">
+										<div class="control-group teacherDetail">
 											<label class="control-label" for="introduction">老师介绍</label>
 											<div class="controls">
 												<textarea id="introduction" class="form-control" rows="3" name="employeeView.introduction"></textarea>

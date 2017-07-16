@@ -1,6 +1,7 @@
 package com.web.soulyogaadmin.employee.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.web.soulyogaadmin.entity.Employee;
 import com.web.soulyogaadmin.entity.EmployeeAccount;
@@ -15,8 +16,6 @@ import com.web.soulyogaadmin.vo.EmployeeView;
  */
 public interface IEmployeeDao {
 
-	// Employee
-
 	public int addEmployee(Employee employee);
 
 	public void updEmployee(Employee employee);
@@ -29,19 +28,24 @@ public interface IEmployeeDao {
 
 	public Employee findEmployeeByIdentityId(String identityId);
 
-	// Teacher
-
 	public void addTeacher(Teacher teacher);
 
 	public void updTeacher(Teacher teacher);
 
 	public Teacher findTeacherByEmployeeId(int employeeId);
 
-	// EmployeeAccount
-
 	public void addEmployeeAccount(EmployeeAccount employeeAccount);
 
 	public void updEmployeeAccount(EmployeeAccount employeeAccount);
 
 	public EmployeeAccount findEmployeeAccountByEmployeeId(int employeeId);
+
+	public Map<Integer, String> findAllYogaClub();
+
+	public Map<Integer, String> findAllPosition();
+
+	public Map<Integer, String> findAllCourseCategory();
+	
+	public List<EmployeeView> findEmployeeViaCondition(EmployeeView employeeView);
+
 }

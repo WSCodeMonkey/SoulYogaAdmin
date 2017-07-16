@@ -35,23 +35,28 @@ public class CourseattendanceServiceImpl implements ICourseattendanceService {
 		List<Coursereservation> list=iCourseattendanceDao.queryByMember(member.getId(), new Date());
 		CourseattendanceView cv;
 		for(Coursereservation c:list){
-			
-			cv=new CourseattendanceView();
-			String checkInendTime=checkEndTime(c.getCourseScheduleId());
-			cv.setCheckInendTime(checkInendTime);
-			try {
-				PropertyUtils.copyProperties(cv, c);
-			} catch (Exception e) {
-				e.printStackTrace();
+			Courseattendance courseattendance=iCourseattendanceDao.getCourseattendanceByCourseReservationId(c.getId());
+			if(courseattendance ==null){
+				cv=new CourseattendanceView();
+				String checkInendTime=checkEndTime(c.getCourseScheduleId());
+				cv.setCheckInendTime(checkInendTime);
+				try {
+					PropertyUtils.copyProperties(cv, c);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				listView.add(cv);
 			}
-			listView.add(cv);
 		}
 		return listView;
 	}
 
 	@Override
-	public void addCheckIn(Courseattendance courseattendance) {
-		
+	public void addCheckIn(Courseattendance courseattendance,String yogaclubname) throws Exception {
+		//分配柜子：
+		//int lockId=yogaclubDao.getPersonalLocker(yogaclubname ,courseattendance.getMemberId());
+		//yogaclubDao.changeLockerStatus(lockId, true);
+		iCourseattendanceDao.addCourseattendance(courseattendance);
 	}
 
 	@Override
@@ -62,7 +67,35 @@ public class CourseattendanceServiceImpl implements ICourseattendanceService {
 
 	@Override
 	public List<CourseattendanceView> queryCheckOutByMember(String mobileNo) {
-		return null;
+		Member member=iMemberDao.queryByMobileNo(mobileNo);
+		List<Courseattendance> list=iCourseattendanceDao.queryAllCourseattendance(member.getId());
+		 List<CourseattendanceView> listView=new  ArrayList<CourseattendanceView> ();
+			CourseattendanceView cv;
+		for(Courseattendance c:list){
+			cv=new CourseattendanceView();
+			cv.setCourseattendanceId(c.getId());
+			Coursereservation coursereservation=iCourseattendanceDao.getCoursereservationByCoursereservationId(c.getCourseReservationId());
+			try {
+				PropertyUtils.copyProperties(cv, coursereservation);
+				PropertyUtils.copyProperties(cv, c);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			listView.add(cv);
+		}
+	
+		
+		
+		return listView;
+	}
+
+	@Override
+	public void addCheckOut(int courseattendanceId, int memberId) throws Exception {
+		Courseattendance courseattendance=iCourseattendanceDao.getCourseattendance(courseattendanceId);
+		courseattendance.setCheckOutTime(new Date());
+		iCourseattendanceDao.updateCourseattendance(courseattendance);
+		//根据memberId进行次卡次数的减少
+		// ...
 	}
 
 	

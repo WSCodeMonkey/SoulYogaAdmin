@@ -10,6 +10,7 @@ public class Employee implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
+	private String phoneNo;
 	private int positionId;
 	private String surname;
 	private String name;
@@ -28,8 +29,9 @@ public class Employee implements java.io.Serializable {
 	public Employee() {
 	}
 
-	public Employee(int positionId, String surname, String name, String fristName, String lastName, int yogaClubId,
+	public Employee(String phoneNo, int positionId, String surname, String name, String fristName, String lastName, int yogaClubId,
 			int isTeacher, Date createdTime, int state) {
+		this.phoneNo = phoneNo;
 		this.positionId = positionId;
 		this.surname = surname;
 		this.name = name;
@@ -41,9 +43,10 @@ public class Employee implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public Employee(int positionId, String surname, String name, String fristName, String lastName, String mail,
+	public Employee(String phoneNo, int positionId, String surname, String name, String fristName, String lastName, String mail,
 			String identityId, Integer gender, String avatarUrl, int yogaClubId, int isTeacher, Date createdTime,
 			Date modifiedTime, int state) {
+		this.phoneNo = phoneNo;
 		this.positionId = positionId;
 		this.surname = surname;
 		this.name = name;
@@ -66,6 +69,14 @@ public class Employee implements java.io.Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 
 	public int getPositionId() {

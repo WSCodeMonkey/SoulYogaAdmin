@@ -11,22 +11,20 @@
 	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 	<link href="assets/styles.css" rel="stylesheet" media="screen">
 	<script src="vendors/jquery-1.11.2.min.js"></script>
+	<script src="vendors/jquery.form.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-	
-	<script type='text/javascript'>
-		(function() {
-			var s = document.createElement('script');
-			s.type = 'text/javascript';
-			s.async = true;
-			s.src = (location.protocol == 'https:' ? 'https://ssl.'
-					: 'http://static.')
-					+ 'gridsumdissector.com/js/Clients/GWD-002498-0C1485/gs.js';
-			var firstScript = document.getElementsByTagName('script')[0];
-			firstScript.parentNode.insertBefore(s, firstScript);
-		})();
-	</script>
+
 	<script type="text/javascript">
-		
+		$(document).ready(function() {
+			$("form").submit(function() {
+				$(this).ajaxSubmit({
+					success: function(data) {
+						$("#employeeList").html(data);
+					}
+				});
+				return false;
+			});
+		});
 	</script>
 	
 </head>
@@ -84,18 +82,68 @@
 			<div class="span9" id="content">
 				<div class="row-fluid">
 					<div class="span12">
+						<div class="block">
+							<div class="navbar navbar-inner block-header">
+								<div class="muted pull-left">员工查询</div>
+							</div>
+							<div class="block-content collapse in">
+								<form action="findEmployeeViaCondition.action" method="post" class="form-horizontal">
+									<div class="control-group">
+										<label class="control-label" for="inputID">员工ID</label>
+										<div class="controls">
+											<input type="text" id="inputID" placeholder="请输入员工id" name="employeeView.id">
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="inputName">员工名</label>
+										<div class="controls">
+											<input type="text" id="inputName" placeholder="请输入名字，可输入部分" name="employeeView.name">
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="inputClub">工作会所</label>
+										<div class="controls">
+											<select name="employeeView.yogaClubId">
+												<option></option>
+												<s:iterator value="yogaclubMap" var="yogaclub">
+													<option value="<s:property value="key"/>"><s:property value="value" /></option>
+												</s:iterator>
+											</select>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">是否老师</label>
+										<div class="controls">
+											<label class="radio inline">
+												<input type="radio" name="employeeView.isTeacher" value="" checked>未知
+											</label>
+											<label class="radio inline">
+												<input type="radio" name="employeeView.isTeacher" value="1">是
+											</label>
+											<label class="radio inline">
+												<input type="radio" name="employeeView.isTeacher" value="0">否
+											</label>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">
+											<button type="submit" class="btn btn-primary">查询</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
 						<!-- block -->
 						<div class="block">
 							<div class="navbar navbar-inner block-header">
 								<div class="muted pull-left">员工列表</div>
-								<div class="pull-right"><span class="badge badge-info">1,234</span>
-								</div>
 							</div>
-							<div class="block-content collapse in">
+							<div class="block-content collapse in" id="employeeList">
 								<table class="table table-striped">
 									<thead>
 										<tr>
 											<th>员工ID</th>
+											<th>电话号码</th>
 											<th>中文名</th>
 											<th>英文名</th>
 											<th>性别</th>
@@ -109,13 +157,14 @@
 										<s:iterator value="employeeViews" var="employeeView">
 											<tr>
 												<td><s:property value="#employeeView.id" /></td>
+												<td><s:property value="#employeeView.phoneNo" /></td>
 												<td><s:property value="#employeeView.surname" /><s:property value="#employeeView.name" /></td>
-												<td><s:property value="#employeeView.fristName" /><s:property value="#employeeView.lastName" /></td>
+												<td><s:property value="#employeeView.fristName" />·<s:property value="#employeeView.lastName" /></td>
 												<td><s:if test="%{#employeeView.gender == 0}">男</s:if><s:else>女</s:else></td>
 												<td><s:property value="#employeeView.mail" /></td>
 												<td><s:property value="#employeeView.positionName" /></td>
 												<td><s:property value="#employeeView.yogaClubName" /></td>
-												<td><a class="btn btn-primary getDtlBtn" href="./showEmployeeDetail.action?id=<s:property value='#employeeView.id' />">查看</a></td>
+												<td><a class="btn getDtlBtn" href="./showEmployeeDetail.action?id=<s:property value='#employeeView.id' />">查看 / 修改</a></td>
 											</tr>
 										</s:iterator>
 									</tbody>

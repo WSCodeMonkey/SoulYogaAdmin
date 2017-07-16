@@ -23578,3 +23578,753 @@ line 1:246: unexpected token: ,
 [TRACE][2017-07-06 17:50:14,352][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-06 13:32:59.0] as column [Modified8_13_0_]
 [TRACE][2017-07-06 17:50:14,352][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [State13_0_]
 [INFO][2017-07-06 17:50:14,383][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6e1567f1: startup date [Thu Jul 06 17:50:08 CST 2017]; root of context hierarchy
+[INFO][2017-07-13 16:15:08,886][org.springframework.test.context.support.DefaultTestContextBootstrapper]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO][2017-07-13 16:15:08,907][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@735b5592, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58651fd0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4520ebad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5419f379, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7dc7cbad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@d2cc05a]
+[INFO][2017-07-13 16:15:09,000][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2017-07-13 16:15:09,296][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2017-07-13 16:15:09,336][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@598067a5: startup date [Thu Jul 13 16:15:09 CST 2017]; root of context hierarchy
+[INFO][2017-07-13 16:15:09,444][com.web.soulyogaadmin.util.EncryptablePropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2017-07-13 16:15:09,696][com.mchange.v2.log.MLog]MLog clients using log4j logging.
+[INFO][2017-07-13 16:15:14,762][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[DEBUG][2017-07-13 16:15:14,847][org.hibernate.type.BasicTypeRegistry]Adding type registration boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:15:14,848][org.hibernate.type.BasicTypeRegistry]Adding type registration boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:15:14,848][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:15:14,848][org.hibernate.type.BasicTypeRegistry]Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@176b3f44
+[DEBUG][2017-07-13 16:15:14,849][org.hibernate.type.BasicTypeRegistry]Adding type registration true_false -> org.hibernate.type.TrueFalseType@31bcf236
+[DEBUG][2017-07-13 16:15:14,849][org.hibernate.type.BasicTypeRegistry]Adding type registration yes_no -> org.hibernate.type.YesNoType@517d4a0d
+[DEBUG][2017-07-13 16:15:14,850][org.hibernate.type.BasicTypeRegistry]Adding type registration byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:15:14,850][org.hibernate.type.BasicTypeRegistry]Adding type registration byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:15:14,850][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:15:14,851][org.hibernate.type.BasicTypeRegistry]Adding type registration character -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:15:14,851][org.hibernate.type.BasicTypeRegistry]Adding type registration char -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:15:14,851][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:15:14,852][org.hibernate.type.BasicTypeRegistry]Adding type registration short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:15:14,853][org.hibernate.type.BasicTypeRegistry]Adding type registration short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:15:14,853][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:15:14,854][org.hibernate.type.BasicTypeRegistry]Adding type registration integer -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:15:14,854][org.hibernate.type.BasicTypeRegistry]Adding type registration int -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:15:14,854][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:15:14,855][org.hibernate.type.BasicTypeRegistry]Adding type registration long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:15:14,855][org.hibernate.type.BasicTypeRegistry]Adding type registration long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:15:14,855][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:15:14,857][org.hibernate.type.BasicTypeRegistry]Adding type registration float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:15:14,857][org.hibernate.type.BasicTypeRegistry]Adding type registration float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:15:14,857][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:15:14,858][org.hibernate.type.BasicTypeRegistry]Adding type registration double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:15:14,859][org.hibernate.type.BasicTypeRegistry]Adding type registration double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:15:14,859][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:15:14,860][org.hibernate.type.BasicTypeRegistry]Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2f40e5db
+[DEBUG][2017-07-13 16:15:14,860][org.hibernate.type.BasicTypeRegistry]Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2f40e5db
+[DEBUG][2017-07-13 16:15:14,862][org.hibernate.type.BasicTypeRegistry]Adding type registration big_integer -> org.hibernate.type.BigIntegerType@12ed9db6
+[DEBUG][2017-07-13 16:15:14,862][org.hibernate.type.BasicTypeRegistry]Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@12ed9db6
+[DEBUG][2017-07-13 16:15:14,863][org.hibernate.type.BasicTypeRegistry]Adding type registration string -> org.hibernate.type.StringType@45fd9a4d
+[DEBUG][2017-07-13 16:15:14,863][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.String -> org.hibernate.type.StringType@45fd9a4d
+[DEBUG][2017-07-13 16:15:14,864][org.hibernate.type.BasicTypeRegistry]Adding type registration url -> org.hibernate.type.UrlType@126945f9
+[DEBUG][2017-07-13 16:15:14,864][org.hibernate.type.BasicTypeRegistry]Adding type registration java.net.URL -> org.hibernate.type.UrlType@126945f9
+[DEBUG][2017-07-13 16:15:14,866][org.hibernate.type.BasicTypeRegistry]Adding type registration date -> org.hibernate.type.DateType@74eb909f
+[DEBUG][2017-07-13 16:15:14,866][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Date -> org.hibernate.type.DateType@74eb909f
+[DEBUG][2017-07-13 16:15:14,868][org.hibernate.type.BasicTypeRegistry]Adding type registration time -> org.hibernate.type.TimeType@13d9b21f
+[DEBUG][2017-07-13 16:15:14,868][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Time -> org.hibernate.type.TimeType@13d9b21f
+[DEBUG][2017-07-13 16:15:14,869][org.hibernate.type.BasicTypeRegistry]Adding type registration timestamp -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:15:14,870][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:15:14,870][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Date -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:15:14,871][org.hibernate.type.BasicTypeRegistry]Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1e636ea3
+[DEBUG][2017-07-13 16:15:14,872][org.hibernate.type.BasicTypeRegistry]Adding type registration calendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:15:14,872][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:15:14,872][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:15:14,873][org.hibernate.type.BasicTypeRegistry]Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6bbe2511
+[DEBUG][2017-07-13 16:15:14,874][org.hibernate.type.BasicTypeRegistry]Adding type registration locale -> org.hibernate.type.LocaleType@4dd02341
+[DEBUG][2017-07-13 16:15:14,874][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@4dd02341
+[DEBUG][2017-07-13 16:15:14,875][org.hibernate.type.BasicTypeRegistry]Adding type registration currency -> org.hibernate.type.CurrencyType@222eb8aa
+[DEBUG][2017-07-13 16:15:14,875][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@222eb8aa
+[DEBUG][2017-07-13 16:15:14,876][org.hibernate.type.BasicTypeRegistry]Adding type registration timezone -> org.hibernate.type.TimeZoneType@4b6690c0
+[DEBUG][2017-07-13 16:15:14,876][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4b6690c0
+[DEBUG][2017-07-13 16:15:14,877][org.hibernate.type.BasicTypeRegistry]Adding type registration class -> org.hibernate.type.ClassType@7cf6a5f9
+[DEBUG][2017-07-13 16:15:14,877][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7cf6a5f9
+[DEBUG][2017-07-13 16:15:14,879][org.hibernate.type.BasicTypeRegistry]Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@67304a40
+[DEBUG][2017-07-13 16:15:14,879][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@67304a40
+[DEBUG][2017-07-13 16:15:14,879][org.hibernate.type.BasicTypeRegistry]Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@79351f41
+[DEBUG][2017-07-13 16:15:14,880][org.hibernate.type.BasicTypeRegistry]Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5d5f10b2
+[DEBUG][2017-07-13 16:15:14,881][org.hibernate.type.BasicTypeRegistry]Adding type registration binary -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:15:14,881][org.hibernate.type.BasicTypeRegistry]Adding type registration byte[] -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:15:14,881][org.hibernate.type.BasicTypeRegistry]Adding type registration [B -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:15:14,882][org.hibernate.type.BasicTypeRegistry]Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:15:14,882][org.hibernate.type.BasicTypeRegistry]Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:15:14,890][org.hibernate.type.BasicTypeRegistry]Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:15:14,890][org.hibernate.type.BasicTypeRegistry]Adding type registration image -> org.hibernate.type.ImageType@7d64e326
+[DEBUG][2017-07-13 16:15:14,891][org.hibernate.type.BasicTypeRegistry]Adding type registration characters -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:15:14,891][org.hibernate.type.BasicTypeRegistry]Adding type registration char[] -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:15:14,891][org.hibernate.type.BasicTypeRegistry]Adding type registration [C -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:15:14,892][org.hibernate.type.BasicTypeRegistry]Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:15:14,892][org.hibernate.type.BasicTypeRegistry]Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:15:14,892][org.hibernate.type.BasicTypeRegistry]Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:15:14,895][org.hibernate.type.BasicTypeRegistry]Adding type registration text -> org.hibernate.type.TextType@66fdec9
+[DEBUG][2017-07-13 16:15:14,897][org.hibernate.type.BasicTypeRegistry]Adding type registration blob -> org.hibernate.type.BlobType@6ad59d92
+[DEBUG][2017-07-13 16:15:14,898][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@6ad59d92
+[DEBUG][2017-07-13 16:15:14,898][org.hibernate.type.BasicTypeRegistry]Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2cc44ad
+[DEBUG][2017-07-13 16:15:14,900][org.hibernate.type.BasicTypeRegistry]Adding type registration clob -> org.hibernate.type.ClobType@42721fe
+[DEBUG][2017-07-13 16:15:14,900][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@42721fe
+[DEBUG][2017-07-13 16:15:14,901][org.hibernate.type.BasicTypeRegistry]Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@5b619d14
+[DEBUG][2017-07-13 16:15:14,901][org.hibernate.type.BasicTypeRegistry]Adding type registration serializable -> org.hibernate.type.SerializableType@6d23017e
+[DEBUG][2017-07-13 16:15:14,903][org.hibernate.type.BasicTypeRegistry]Adding type registration object -> org.hibernate.type.ObjectType@5669c5fb
+[DEBUG][2017-07-13 16:15:14,903][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5669c5fb
+[DEBUG][2017-07-13 16:15:14,904][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@c4ed84
+[DEBUG][2017-07-13 16:15:14,904][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@189aa67a
+[DEBUG][2017-07-13 16:15:14,904][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5a9d6f02
+[DEBUG][2017-07-13 16:15:14,904][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@362045c0
+[DEBUG][2017-07-13 16:15:14,904][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@112f364d
+[DEBUG][2017-07-13 16:15:14,904][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5ccbeb64
+[DEBUG][2017-07-13 16:15:14,905][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6d9f7a80
+[DEBUG][2017-07-13 16:15:14,905][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@59252cb6
+[INFO][2017-07-13 16:15:14,915][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2017-07-13 16:15:14,918][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2017-07-13 16:15:14,919][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2017-07-13 16:15:14,920][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2017-07-13 16:15:14,930][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Administrator.hbm.xml
+[INFO][2017-07-13 16:15:14,990][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Classroom.hbm.xml
+[INFO][2017-07-13 16:15:15,006][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Course.hbm.xml
+[INFO][2017-07-13 16:15:15,016][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Courseattendance.hbm.xml
+[INFO][2017-07-13 16:15:15,026][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Coursecategory.hbm.xml
+[INFO][2017-07-13 16:15:15,035][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Coursereservation.hbm.xml
+[INFO][2017-07-13 16:15:15,054][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Courseschedule.hbm.xml
+[INFO][2017-07-13 16:15:15,062][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Department.hbm.xml
+[INFO][2017-07-13 16:15:15,067][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Employee.hbm.xml
+[INFO][2017-07-13 16:15:15,087][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/EmployeeAccount.hbm.xml
+[INFO][2017-07-13 16:15:15,091][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Locker.hbm.xml
+[INFO][2017-07-13 16:15:15,099][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Member.hbm.xml
+[WARN][2017-07-13 16:15:15,103][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:15:15,114][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Memberaccount.hbm.xml
+[WARN][2017-07-13 16:15:15,116][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:15:15,121][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Memberloginlog.hbm.xml
+[WARN][2017-07-13 16:15:15,126][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:15:15,132][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Position.hbm.xml
+[INFO][2017-07-13 16:15:15,142][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Product.hbm.xml
+[INFO][2017-07-13 16:15:15,148][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Teacher.hbm.xml
+[INFO][2017-07-13 16:15:15,153][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Yogaclub.hbm.xml
+[INFO][2017-07-13 16:15:15,159][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Yogacushion.hbm.xml
+[INFO][2017-07-13 16:15:15,317][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> s4h3l99pgdhvyy1dmu4zn|2d778add, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> s4h3l99pgdhvyy1dmu4zn|2d778add, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/mysoulyoga, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO][2017-07-13 16:15:15,601][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2017-07-13 16:15:15,607][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO][2017-07-13 16:15:15,612][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2017-07-13 16:15:15,615][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[TRACE][2017-07-13 16:15:15,623][org.hibernate.type.TypeFactory]Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@517bd097
+[INFO][2017-07-13 16:15:15,820][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2017-07-13 16:15:15,820][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2017-07-13 16:15:15,824][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2017-07-13 16:15:15,834][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.member
+[INFO][2017-07-13 16:15:15,835][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [birthday, salesconsultantid, address, modifiedtime, gender, avatarurl, identityid, name, id, mobileno, state, createdtime]
+[INFO][2017-07-13 16:15:15,835][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,835][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,843][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.memberaccount
+[INFO][2017-07-13 16:15:15,843][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [password, modifiedtime, nickname, fingerprint, id, state, createdtime, memberid]
+[INFO][2017-07-13 16:15:15,843][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,843][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,847][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.memberloginlog
+[INFO][2017-07-13 16:15:15,847][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, loginfo, id, state, createdtime, memberid, status]
+[INFO][2017-07-13 16:15:15,847][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,847][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,851][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.course
+[INFO][2017-07-13 16:15:15,851][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubid, modifiedtime, coursecategoryid, name, id, state, introduction, point, createdtime]
+[INFO][2017-07-13 16:15:15,851][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,851][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:15:15,855][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.coursecategory
+[INFO][2017-07-13 16:15:15,855][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, name, id, state, createdtime]
+[INFO][2017-07-13 16:15:15,855][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,855][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,859][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.courseschedule
+[INFO][2017-07-13 16:15:15,859][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [reservationendtime, classroomid, scheduledate, endtime, starttime, createdtime, teacherid, reservationstarttime, modifiedtime, checkinendtime, cancellationstarttime, id, state, courseid, cancellationendtime]
+[INFO][2017-07-13 16:15:15,859][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,859][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,860][java.sql.DatabaseMetaData]HHH000262: Table not found: Administrator
+[INFO][2017-07-13 16:15:15,863][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.classroom
+[INFO][2017-07-13 16:15:15,863][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [classroomno, yogacludid, modifiedtime, id, state, createdtime]
+[INFO][2017-07-13 16:15:15,863][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,863][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,866][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.courseattendance
+[INFO][2017-07-13 16:15:15,867][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, productpurchaseid, id, state, coursereservationid, checkintime, checkouttime, createdtime, memberid]
+[INFO][2017-07-13 16:15:15,867][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,867][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,870][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.coursereservation
+[INFO][2017-07-13 16:15:15,870][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubname, coursename, scheduledate, endtime, starttime, createdtime, classroomno, modifiedtime, teachername, id, coursescheduleid, state, memberid, yogacushionno, status]
+[INFO][2017-07-13 16:15:15,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,874][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.department
+[INFO][2017-07-13 16:15:15,874][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, name, id, state, createdtime]
+[INFO][2017-07-13 16:15:15,875][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,875][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,878][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.employee
+[INFO][2017-07-13 16:15:15,879][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [fristname, mail, gender, avatarurl, createdtime, lastname, yogaclubid, isteacher, modifiedtime, positionid, surname, identityid, name, id, state]
+[INFO][2017-07-13 16:15:15,879][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,879][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:15:15,882][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.employeeaccount
+[INFO][2017-07-13 16:15:15,882][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [password, modifiedtime, id, state, employeeid, createdtime, username]
+[INFO][2017-07-13 16:15:15,882][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,882][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:15:15,886][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.locker
+[INFO][2017-07-13 16:15:15,886][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubid, modifiedtime, id, state, lockerno, createdtime, status]
+[INFO][2017-07-13 16:15:15,886][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,886][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,889][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.position
+[INFO][2017-07-13 16:15:15,889][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, departmentid, positionname, id, state, createdtime]
+[INFO][2017-07-13 16:15:15,890][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,890][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,893][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.product
+[INFO][2017-07-13 16:15:15,893][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [usingstarttime, modifiedtime, usingrestriction, price, name, count, activationcategory, cardcategoryid, usingendtime, id, state, createdtime]
+[INFO][2017-07-13 16:15:15,893][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,894][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,897][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.yogaclub
+[INFO][2017-07-13 16:15:15,897][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [address, modifiedtime, phone, city, name, id, state, linkman, createdtime]
+[INFO][2017-07-13 16:15:15,897][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,897][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,900][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.yogacushion
+[INFO][2017-07-13 16:15:15,900][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, classroomid, id, state, createdtime, yogacushionno]
+[INFO][2017-07-13 16:15:15,900][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,900][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.teacher
+[INFO][2017-07-13 16:15:15,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, coursecategoryids, id, state, employeeid, introduction, createdtime]
+[INFO][2017-07-13 16:15:15,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:15:15,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:15:15,903][java.sql.DatabaseMetaData]HHH000262: Table not found: Administrator
+[ERROR][2017-07-13 16:15:15,908][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000388: Unsuccessful: create table dbo.Administrator (admin_id integer not null auto_increment, admin_name varchar(50), password longtext, admin_status integer, primary key (admin_id))
+[ERROR][2017-07-13 16:15:15,908][org.hibernate.tool.hbm2ddl.SchemaUpdate]Unknown database 'dbo'
+[INFO][2017-07-13 16:15:15,908][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2017-07-13 16:15:16,057][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> s4h3l99pgdhvyy1dmu4zn|2d778add, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> s4h3l99pgdhvyy1dmu4zn|2d778add, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/mysoulyoga, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[ERROR][2017-07-13 16:15:16,292][org.hibernate.hql.internal.ast.ErrorCounter]line 1:83: unexpected token: ca
+[ERROR][2017-07-13 16:15:16,293][org.hibernate.hql.internal.ast.ErrorCounter]line 1:83: unexpected token: ca
+line 1:83: unexpected token: ca
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.atom(HqlBaseParser.java:3473)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.unaryExpression(HqlBaseParser.java:3168)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.multiplyExpression(HqlBaseParser.java:3040)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.additiveExpression(HqlBaseParser.java:2750)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.concatenation(HqlBaseParser.java:568)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.relationalExpression(HqlBaseParser.java:2518)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.equalityExpression(HqlBaseParser.java:2379)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.negatedExpression(HqlBaseParser.java:2343)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.logicalAndExpression(HqlBaseParser.java:2269)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.logicalOrExpression(HqlBaseParser.java:2224)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.expression(HqlBaseParser.java:2010)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.logicalExpression(HqlBaseParser.java:1786)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.whereClause(HqlBaseParser.java:452)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:706)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:294)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:157)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:266)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:180)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:136)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:105)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:80)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:168)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:219)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:197)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1732)
+	at com.web.soulyogaadmin.courseattendance.dao.impl.CourseattendanceDaoImpl.queryAllCourseattendance(CourseattendanceDaoImpl.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy25.queryAllCourseattendance(Unknown Source)
+	at com.web.soulyogaadmin.courseattendance.test.TestCourseattendance.queryAllCourseattendance(TestCourseattendance.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+[INFO][2017-07-13 16:15:16,307][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@598067a5: startup date [Thu Jul 13 16:15:09 CST 2017]; root of context hierarchy
+[INFO][2017-07-13 16:16:24,875][org.springframework.test.context.support.DefaultTestContextBootstrapper]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO][2017-07-13 16:16:24,892][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@735b5592, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58651fd0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4520ebad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5419f379, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7dc7cbad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@d2cc05a]
+[INFO][2017-07-13 16:16:24,995][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2017-07-13 16:16:25,481][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2017-07-13 16:16:25,551][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@598067a5: startup date [Thu Jul 13 16:16:25 CST 2017]; root of context hierarchy
+[INFO][2017-07-13 16:16:25,750][com.web.soulyogaadmin.util.EncryptablePropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2017-07-13 16:16:26,092][com.mchange.v2.log.MLog]MLog clients using log4j logging.
+[INFO][2017-07-13 16:16:31,158][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[DEBUG][2017-07-13 16:16:31,235][org.hibernate.type.BasicTypeRegistry]Adding type registration boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:16:31,235][org.hibernate.type.BasicTypeRegistry]Adding type registration boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:16:31,235][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:16:31,235][org.hibernate.type.BasicTypeRegistry]Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@176b3f44
+[DEBUG][2017-07-13 16:16:31,236][org.hibernate.type.BasicTypeRegistry]Adding type registration true_false -> org.hibernate.type.TrueFalseType@31bcf236
+[DEBUG][2017-07-13 16:16:31,236][org.hibernate.type.BasicTypeRegistry]Adding type registration yes_no -> org.hibernate.type.YesNoType@517d4a0d
+[DEBUG][2017-07-13 16:16:31,237][org.hibernate.type.BasicTypeRegistry]Adding type registration byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:16:31,237][org.hibernate.type.BasicTypeRegistry]Adding type registration byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:16:31,238][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:16:31,238][org.hibernate.type.BasicTypeRegistry]Adding type registration character -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:16:31,238][org.hibernate.type.BasicTypeRegistry]Adding type registration char -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:16:31,239][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:16:31,240][org.hibernate.type.BasicTypeRegistry]Adding type registration short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:16:31,240][org.hibernate.type.BasicTypeRegistry]Adding type registration short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:16:31,240][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:16:31,241][org.hibernate.type.BasicTypeRegistry]Adding type registration integer -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:16:31,241][org.hibernate.type.BasicTypeRegistry]Adding type registration int -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:16:31,241][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:16:31,242][org.hibernate.type.BasicTypeRegistry]Adding type registration long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:16:31,242][org.hibernate.type.BasicTypeRegistry]Adding type registration long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:16:31,242][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:16:31,243][org.hibernate.type.BasicTypeRegistry]Adding type registration float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:16:31,243][org.hibernate.type.BasicTypeRegistry]Adding type registration float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:16:31,243][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:16:31,244][org.hibernate.type.BasicTypeRegistry]Adding type registration double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:16:31,244][org.hibernate.type.BasicTypeRegistry]Adding type registration double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:16:31,244][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:16:31,245][org.hibernate.type.BasicTypeRegistry]Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2f40e5db
+[DEBUG][2017-07-13 16:16:31,245][org.hibernate.type.BasicTypeRegistry]Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2f40e5db
+[DEBUG][2017-07-13 16:16:31,245][org.hibernate.type.BasicTypeRegistry]Adding type registration big_integer -> org.hibernate.type.BigIntegerType@12ed9db6
+[DEBUG][2017-07-13 16:16:31,245][org.hibernate.type.BasicTypeRegistry]Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@12ed9db6
+[DEBUG][2017-07-13 16:16:31,246][org.hibernate.type.BasicTypeRegistry]Adding type registration string -> org.hibernate.type.StringType@45fd9a4d
+[DEBUG][2017-07-13 16:16:31,246][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.String -> org.hibernate.type.StringType@45fd9a4d
+[DEBUG][2017-07-13 16:16:31,247][org.hibernate.type.BasicTypeRegistry]Adding type registration url -> org.hibernate.type.UrlType@126945f9
+[DEBUG][2017-07-13 16:16:31,247][org.hibernate.type.BasicTypeRegistry]Adding type registration java.net.URL -> org.hibernate.type.UrlType@126945f9
+[DEBUG][2017-07-13 16:16:31,248][org.hibernate.type.BasicTypeRegistry]Adding type registration date -> org.hibernate.type.DateType@74eb909f
+[DEBUG][2017-07-13 16:16:31,248][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Date -> org.hibernate.type.DateType@74eb909f
+[DEBUG][2017-07-13 16:16:31,249][org.hibernate.type.BasicTypeRegistry]Adding type registration time -> org.hibernate.type.TimeType@13d9b21f
+[DEBUG][2017-07-13 16:16:31,249][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Time -> org.hibernate.type.TimeType@13d9b21f
+[DEBUG][2017-07-13 16:16:31,250][org.hibernate.type.BasicTypeRegistry]Adding type registration timestamp -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:16:31,250][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:16:31,251][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Date -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:16:31,251][org.hibernate.type.BasicTypeRegistry]Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1e636ea3
+[DEBUG][2017-07-13 16:16:31,252][org.hibernate.type.BasicTypeRegistry]Adding type registration calendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:16:31,252][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:16:31,252][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:16:31,253][org.hibernate.type.BasicTypeRegistry]Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6bbe2511
+[DEBUG][2017-07-13 16:16:31,253][org.hibernate.type.BasicTypeRegistry]Adding type registration locale -> org.hibernate.type.LocaleType@4dd02341
+[DEBUG][2017-07-13 16:16:31,253][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@4dd02341
+[DEBUG][2017-07-13 16:16:31,254][org.hibernate.type.BasicTypeRegistry]Adding type registration currency -> org.hibernate.type.CurrencyType@222eb8aa
+[DEBUG][2017-07-13 16:16:31,254][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@222eb8aa
+[DEBUG][2017-07-13 16:16:31,254][org.hibernate.type.BasicTypeRegistry]Adding type registration timezone -> org.hibernate.type.TimeZoneType@4b6690c0
+[DEBUG][2017-07-13 16:16:31,255][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4b6690c0
+[DEBUG][2017-07-13 16:16:31,255][org.hibernate.type.BasicTypeRegistry]Adding type registration class -> org.hibernate.type.ClassType@7cf6a5f9
+[DEBUG][2017-07-13 16:16:31,255][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7cf6a5f9
+[DEBUG][2017-07-13 16:16:31,257][org.hibernate.type.BasicTypeRegistry]Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@67304a40
+[DEBUG][2017-07-13 16:16:31,257][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@67304a40
+[DEBUG][2017-07-13 16:16:31,257][org.hibernate.type.BasicTypeRegistry]Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@79351f41
+[DEBUG][2017-07-13 16:16:31,258][org.hibernate.type.BasicTypeRegistry]Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5d5f10b2
+[DEBUG][2017-07-13 16:16:31,259][org.hibernate.type.BasicTypeRegistry]Adding type registration binary -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:16:31,259][org.hibernate.type.BasicTypeRegistry]Adding type registration byte[] -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:16:31,259][org.hibernate.type.BasicTypeRegistry]Adding type registration [B -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:16:31,260][org.hibernate.type.BasicTypeRegistry]Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:16:31,260][org.hibernate.type.BasicTypeRegistry]Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:16:31,260][org.hibernate.type.BasicTypeRegistry]Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:16:31,260][org.hibernate.type.BasicTypeRegistry]Adding type registration image -> org.hibernate.type.ImageType@7d64e326
+[DEBUG][2017-07-13 16:16:31,261][org.hibernate.type.BasicTypeRegistry]Adding type registration characters -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:16:31,261][org.hibernate.type.BasicTypeRegistry]Adding type registration char[] -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:16:31,261][org.hibernate.type.BasicTypeRegistry]Adding type registration [C -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:16:31,262][org.hibernate.type.BasicTypeRegistry]Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:16:31,262][org.hibernate.type.BasicTypeRegistry]Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:16:31,263][org.hibernate.type.BasicTypeRegistry]Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:16:31,263][org.hibernate.type.BasicTypeRegistry]Adding type registration text -> org.hibernate.type.TextType@66fdec9
+[DEBUG][2017-07-13 16:16:31,266][org.hibernate.type.BasicTypeRegistry]Adding type registration blob -> org.hibernate.type.BlobType@6ad59d92
+[DEBUG][2017-07-13 16:16:31,266][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@6ad59d92
+[DEBUG][2017-07-13 16:16:31,267][org.hibernate.type.BasicTypeRegistry]Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2cc44ad
+[DEBUG][2017-07-13 16:16:31,269][org.hibernate.type.BasicTypeRegistry]Adding type registration clob -> org.hibernate.type.ClobType@42721fe
+[DEBUG][2017-07-13 16:16:31,269][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@42721fe
+[DEBUG][2017-07-13 16:16:31,270][org.hibernate.type.BasicTypeRegistry]Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@5b619d14
+[DEBUG][2017-07-13 16:16:31,271][org.hibernate.type.BasicTypeRegistry]Adding type registration serializable -> org.hibernate.type.SerializableType@6d23017e
+[DEBUG][2017-07-13 16:16:31,273][org.hibernate.type.BasicTypeRegistry]Adding type registration object -> org.hibernate.type.ObjectType@5669c5fb
+[DEBUG][2017-07-13 16:16:31,273][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5669c5fb
+[DEBUG][2017-07-13 16:16:31,274][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@c4ed84
+[DEBUG][2017-07-13 16:16:31,274][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@189aa67a
+[DEBUG][2017-07-13 16:16:31,276][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5a9d6f02
+[DEBUG][2017-07-13 16:16:31,276][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@362045c0
+[DEBUG][2017-07-13 16:16:31,276][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@112f364d
+[DEBUG][2017-07-13 16:16:31,276][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5ccbeb64
+[DEBUG][2017-07-13 16:16:31,276][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6d9f7a80
+[DEBUG][2017-07-13 16:16:31,276][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@59252cb6
+[INFO][2017-07-13 16:16:31,296][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2017-07-13 16:16:31,302][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2017-07-13 16:16:31,303][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2017-07-13 16:16:31,304][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2017-07-13 16:16:31,326][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Administrator.hbm.xml
+[INFO][2017-07-13 16:16:31,409][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Classroom.hbm.xml
+[INFO][2017-07-13 16:16:31,433][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Course.hbm.xml
+[INFO][2017-07-13 16:16:31,449][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Courseattendance.hbm.xml
+[INFO][2017-07-13 16:16:31,460][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Coursecategory.hbm.xml
+[INFO][2017-07-13 16:16:31,479][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Coursereservation.hbm.xml
+[INFO][2017-07-13 16:16:31,491][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Courseschedule.hbm.xml
+[INFO][2017-07-13 16:16:31,500][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Department.hbm.xml
+[INFO][2017-07-13 16:16:31,512][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Employee.hbm.xml
+[INFO][2017-07-13 16:16:31,554][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/EmployeeAccount.hbm.xml
+[INFO][2017-07-13 16:16:31,560][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Locker.hbm.xml
+[INFO][2017-07-13 16:16:31,566][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Member.hbm.xml
+[WARN][2017-07-13 16:16:31,568][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:16:31,572][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Memberaccount.hbm.xml
+[WARN][2017-07-13 16:16:31,574][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:16:31,578][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Memberloginlog.hbm.xml
+[WARN][2017-07-13 16:16:31,580][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:16:31,583][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Position.hbm.xml
+[INFO][2017-07-13 16:16:31,588][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Product.hbm.xml
+[INFO][2017-07-13 16:16:31,596][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Teacher.hbm.xml
+[INFO][2017-07-13 16:16:31,604][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Yogaclub.hbm.xml
+[INFO][2017-07-13 16:16:31,609][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Yogacushion.hbm.xml
+[INFO][2017-07-13 16:16:31,764][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> s4h3l99pgdjix41gjt1tt|2d778add, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> s4h3l99pgdjix41gjt1tt|2d778add, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/mysoulyoga, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO][2017-07-13 16:16:32,037][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2017-07-13 16:16:32,042][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO][2017-07-13 16:16:32,047][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2017-07-13 16:16:32,049][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[TRACE][2017-07-13 16:16:32,058][org.hibernate.type.TypeFactory]Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@142eef62
+[INFO][2017-07-13 16:16:32,246][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2017-07-13 16:16:32,246][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2017-07-13 16:16:32,249][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2017-07-13 16:16:32,266][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.member
+[INFO][2017-07-13 16:16:32,266][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [birthday, salesconsultantid, address, modifiedtime, gender, avatarurl, identityid, name, id, mobileno, state, createdtime]
+[INFO][2017-07-13 16:16:32,266][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,266][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,270][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.memberaccount
+[INFO][2017-07-13 16:16:32,270][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [password, modifiedtime, nickname, fingerprint, id, state, createdtime, memberid]
+[INFO][2017-07-13 16:16:32,270][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,270][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,274][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.memberloginlog
+[INFO][2017-07-13 16:16:32,274][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, loginfo, id, state, createdtime, memberid, status]
+[INFO][2017-07-13 16:16:32,274][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,274][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,278][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.course
+[INFO][2017-07-13 16:16:32,278][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubid, modifiedtime, coursecategoryid, name, id, state, introduction, point, createdtime]
+[INFO][2017-07-13 16:16:32,278][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,278][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:16:32,281][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.coursecategory
+[INFO][2017-07-13 16:16:32,281][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, name, id, state, createdtime]
+[INFO][2017-07-13 16:16:32,281][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,282][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,285][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.courseschedule
+[INFO][2017-07-13 16:16:32,285][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [reservationendtime, classroomid, scheduledate, endtime, starttime, createdtime, teacherid, reservationstarttime, modifiedtime, checkinendtime, cancellationstarttime, id, state, courseid, cancellationendtime]
+[INFO][2017-07-13 16:16:32,285][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,285][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,286][java.sql.DatabaseMetaData]HHH000262: Table not found: Administrator
+[INFO][2017-07-13 16:16:32,289][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.classroom
+[INFO][2017-07-13 16:16:32,289][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [classroomno, yogacludid, modifiedtime, id, state, createdtime]
+[INFO][2017-07-13 16:16:32,289][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,290][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,293][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.courseattendance
+[INFO][2017-07-13 16:16:32,293][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, productpurchaseid, id, state, coursereservationid, checkintime, checkouttime, createdtime, memberid]
+[INFO][2017-07-13 16:16:32,293][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,293][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,297][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.coursereservation
+[INFO][2017-07-13 16:16:32,297][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubname, coursename, scheduledate, endtime, starttime, createdtime, classroomno, modifiedtime, teachername, id, coursescheduleid, state, memberid, yogacushionno, status]
+[INFO][2017-07-13 16:16:32,297][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,297][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,300][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.department
+[INFO][2017-07-13 16:16:32,300][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, name, id, state, createdtime]
+[INFO][2017-07-13 16:16:32,300][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,301][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,304][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.employee
+[INFO][2017-07-13 16:16:32,304][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [fristname, mail, gender, avatarurl, createdtime, lastname, yogaclubid, isteacher, modifiedtime, positionid, surname, identityid, name, id, state]
+[INFO][2017-07-13 16:16:32,304][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,304][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:16:32,308][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.employeeaccount
+[INFO][2017-07-13 16:16:32,308][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [password, modifiedtime, id, state, employeeid, createdtime, username]
+[INFO][2017-07-13 16:16:32,308][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,308][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:16:32,311][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.locker
+[INFO][2017-07-13 16:16:32,311][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubid, modifiedtime, id, state, lockerno, createdtime, status]
+[INFO][2017-07-13 16:16:32,311][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,311][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,315][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.position
+[INFO][2017-07-13 16:16:32,315][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, departmentid, positionname, id, state, createdtime]
+[INFO][2017-07-13 16:16:32,315][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,315][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,318][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.product
+[INFO][2017-07-13 16:16:32,319][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [usingstarttime, modifiedtime, usingrestriction, price, name, count, activationcategory, cardcategoryid, usingendtime, id, state, createdtime]
+[INFO][2017-07-13 16:16:32,319][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,319][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,324][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.yogaclub
+[INFO][2017-07-13 16:16:32,324][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [address, modifiedtime, phone, city, name, id, state, linkman, createdtime]
+[INFO][2017-07-13 16:16:32,324][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,324][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,327][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.yogacushion
+[INFO][2017-07-13 16:16:32,327][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, classroomid, id, state, createdtime, yogacushionno]
+[INFO][2017-07-13 16:16:32,327][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,327][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,330][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.teacher
+[INFO][2017-07-13 16:16:32,330][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, coursecategoryids, id, state, employeeid, introduction, createdtime]
+[INFO][2017-07-13 16:16:32,330][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:16:32,330][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:16:32,331][java.sql.DatabaseMetaData]HHH000262: Table not found: Administrator
+[ERROR][2017-07-13 16:16:32,337][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000388: Unsuccessful: create table dbo.Administrator (admin_id integer not null auto_increment, admin_name varchar(50), password longtext, admin_status integer, primary key (admin_id))
+[ERROR][2017-07-13 16:16:32,337][org.hibernate.tool.hbm2ddl.SchemaUpdate]Unknown database 'dbo'
+[INFO][2017-07-13 16:16:32,337][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2017-07-13 16:16:32,471][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> s4h3l99pgdjix41gjt1tt|2d778add, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> s4h3l99pgdjix41gjt1tt|2d778add, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/mysoulyoga, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[WARN][2017-07-13 16:16:32,641][org.hibernate.hql.internal.ast.HqlSqlWalker][DEPRECATION] Encountered positional parameter near line 1, column 114.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[DEBUG][2017-07-13 16:16:32,702][org.hibernate.SQL]select courseatte0_.ID as ID3_, courseatte0_.MemberID as MemberID3_, courseatte0_.CourseReservationID as CourseRe3_3_, courseatte0_.ProductPurchaseID as ProductP4_3_, courseatte0_.CheckInTime as CheckInT5_3_, courseatte0_.CheckOutTime as CheckOut6_3_, courseatte0_.CreatedTime as CreatedT7_3_, courseatte0_.ModifiedTime as Modified8_3_, courseatte0_.State as State3_ from mysoulyoga.courseattendance courseatte0_ where courseatte0_.State=0 and (courseatte0_.CheckOutTime is null) and courseatte0_.MemberID=?
+[TRACE][2017-07-13 16:16:32,713][org.hibernate.type.descriptor.sql.BasicBinder]binding parameter [1] as [INTEGER] - 27
+[TRACE][2017-07-13 16:16:32,731][org.hibernate.type.descriptor.sql.BasicExtractor]Found [13] as column [ID3_]
+[TRACE][2017-07-13 16:16:32,735][org.hibernate.type.descriptor.sql.BasicExtractor]Found [27] as column [MemberID3_]
+[TRACE][2017-07-13 16:16:32,735][org.hibernate.type.descriptor.sql.BasicExtractor]Found [1] as column [CourseRe3_3_]
+[TRACE][2017-07-13 16:16:32,735][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [ProductP4_3_]
+[TRACE][2017-07-13 16:16:32,741][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:00.0] as column [CheckInT5_3_]
+[TRACE][2017-07-13 16:16:32,741][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [CheckOut6_3_]
+[TRACE][2017-07-13 16:16:32,742][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:00.0] as column [CreatedT7_3_]
+[TRACE][2017-07-13 16:16:32,742][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [Modified8_3_]
+[TRACE][2017-07-13 16:16:32,742][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [State3_]
+[TRACE][2017-07-13 16:16:32,743][org.hibernate.type.descriptor.sql.BasicExtractor]Found [14] as column [ID3_]
+[TRACE][2017-07-13 16:16:32,743][org.hibernate.type.descriptor.sql.BasicExtractor]Found [27] as column [MemberID3_]
+[TRACE][2017-07-13 16:16:32,743][org.hibernate.type.descriptor.sql.BasicExtractor]Found [1] as column [CourseRe3_3_]
+[TRACE][2017-07-13 16:16:32,743][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [ProductP4_3_]
+[TRACE][2017-07-13 16:16:32,744][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:12.0] as column [CheckInT5_3_]
+[TRACE][2017-07-13 16:16:32,744][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [CheckOut6_3_]
+[TRACE][2017-07-13 16:16:32,744][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:12.0] as column [CreatedT7_3_]
+[TRACE][2017-07-13 16:16:32,744][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [Modified8_3_]
+[TRACE][2017-07-13 16:16:32,744][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [State3_]
+[INFO][2017-07-13 16:16:32,754][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@598067a5: startup date [Thu Jul 13 16:16:25 CST 2017]; root of context hierarchy
+[INFO][2017-07-13 16:17:28,133][org.springframework.test.context.support.DefaultTestContextBootstrapper]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO][2017-07-13 16:17:28,147][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@735b5592, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58651fd0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4520ebad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5419f379, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7dc7cbad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@d2cc05a]
+[INFO][2017-07-13 16:17:28,231][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2017-07-13 16:17:28,544][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2017-07-13 16:17:28,598][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@598067a5: startup date [Thu Jul 13 16:17:28 CST 2017]; root of context hierarchy
+[INFO][2017-07-13 16:17:28,749][com.web.soulyogaadmin.util.EncryptablePropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2017-07-13 16:17:29,085][com.mchange.v2.log.MLog]MLog clients using log4j logging.
+[INFO][2017-07-13 16:17:34,145][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[DEBUG][2017-07-13 16:17:34,223][org.hibernate.type.BasicTypeRegistry]Adding type registration boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:17:34,223][org.hibernate.type.BasicTypeRegistry]Adding type registration boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:17:34,223][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@6d1ef78d
+[DEBUG][2017-07-13 16:17:34,223][org.hibernate.type.BasicTypeRegistry]Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@176b3f44
+[DEBUG][2017-07-13 16:17:34,224][org.hibernate.type.BasicTypeRegistry]Adding type registration true_false -> org.hibernate.type.TrueFalseType@31bcf236
+[DEBUG][2017-07-13 16:17:34,224][org.hibernate.type.BasicTypeRegistry]Adding type registration yes_no -> org.hibernate.type.YesNoType@517d4a0d
+[DEBUG][2017-07-13 16:17:34,225][org.hibernate.type.BasicTypeRegistry]Adding type registration byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:17:34,225][org.hibernate.type.BasicTypeRegistry]Adding type registration byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:17:34,225][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2c1156a7
+[DEBUG][2017-07-13 16:17:34,226][org.hibernate.type.BasicTypeRegistry]Adding type registration character -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:17:34,226][org.hibernate.type.BasicTypeRegistry]Adding type registration char -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:17:34,226][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@e19bb76
+[DEBUG][2017-07-13 16:17:34,227][org.hibernate.type.BasicTypeRegistry]Adding type registration short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:17:34,227][org.hibernate.type.BasicTypeRegistry]Adding type registration short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:17:34,227][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Short -> org.hibernate.type.ShortType@1a760689
+[DEBUG][2017-07-13 16:17:34,228][org.hibernate.type.BasicTypeRegistry]Adding type registration integer -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:17:34,228][org.hibernate.type.BasicTypeRegistry]Adding type registration int -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:17:34,228][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@2250b9f2
+[DEBUG][2017-07-13 16:17:34,229][org.hibernate.type.BasicTypeRegistry]Adding type registration long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:17:34,229][org.hibernate.type.BasicTypeRegistry]Adding type registration long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:17:34,229][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Long -> org.hibernate.type.LongType@f316aeb
+[DEBUG][2017-07-13 16:17:34,230][org.hibernate.type.BasicTypeRegistry]Adding type registration float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:17:34,230][org.hibernate.type.BasicTypeRegistry]Adding type registration float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:17:34,230][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7502291e
+[DEBUG][2017-07-13 16:17:34,231][org.hibernate.type.BasicTypeRegistry]Adding type registration double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:17:34,231][org.hibernate.type.BasicTypeRegistry]Adding type registration double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:17:34,231][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@22875539
+[DEBUG][2017-07-13 16:17:34,232][org.hibernate.type.BasicTypeRegistry]Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2f40e5db
+[DEBUG][2017-07-13 16:17:34,232][org.hibernate.type.BasicTypeRegistry]Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2f40e5db
+[DEBUG][2017-07-13 16:17:34,233][org.hibernate.type.BasicTypeRegistry]Adding type registration big_integer -> org.hibernate.type.BigIntegerType@12ed9db6
+[DEBUG][2017-07-13 16:17:34,233][org.hibernate.type.BasicTypeRegistry]Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@12ed9db6
+[DEBUG][2017-07-13 16:17:34,234][org.hibernate.type.BasicTypeRegistry]Adding type registration string -> org.hibernate.type.StringType@45fd9a4d
+[DEBUG][2017-07-13 16:17:34,234][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.String -> org.hibernate.type.StringType@45fd9a4d
+[DEBUG][2017-07-13 16:17:34,234][org.hibernate.type.BasicTypeRegistry]Adding type registration url -> org.hibernate.type.UrlType@126945f9
+[DEBUG][2017-07-13 16:17:34,234][org.hibernate.type.BasicTypeRegistry]Adding type registration java.net.URL -> org.hibernate.type.UrlType@126945f9
+[DEBUG][2017-07-13 16:17:34,236][org.hibernate.type.BasicTypeRegistry]Adding type registration date -> org.hibernate.type.DateType@74eb909f
+[DEBUG][2017-07-13 16:17:34,236][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Date -> org.hibernate.type.DateType@74eb909f
+[DEBUG][2017-07-13 16:17:34,237][org.hibernate.type.BasicTypeRegistry]Adding type registration time -> org.hibernate.type.TimeType@13d9b21f
+[DEBUG][2017-07-13 16:17:34,237][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Time -> org.hibernate.type.TimeType@13d9b21f
+[DEBUG][2017-07-13 16:17:34,238][org.hibernate.type.BasicTypeRegistry]Adding type registration timestamp -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:17:34,238][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:17:34,238][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Date -> org.hibernate.type.TimestampType@687ef2e0
+[DEBUG][2017-07-13 16:17:34,239][org.hibernate.type.BasicTypeRegistry]Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1e636ea3
+[DEBUG][2017-07-13 16:17:34,240][org.hibernate.type.BasicTypeRegistry]Adding type registration calendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:17:34,240][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:17:34,240][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@63f8276e
+[DEBUG][2017-07-13 16:17:34,240][org.hibernate.type.BasicTypeRegistry]Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6bbe2511
+[DEBUG][2017-07-13 16:17:34,241][org.hibernate.type.BasicTypeRegistry]Adding type registration locale -> org.hibernate.type.LocaleType@4dd02341
+[DEBUG][2017-07-13 16:17:34,241][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@4dd02341
+[DEBUG][2017-07-13 16:17:34,242][org.hibernate.type.BasicTypeRegistry]Adding type registration currency -> org.hibernate.type.CurrencyType@222eb8aa
+[DEBUG][2017-07-13 16:17:34,242][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@222eb8aa
+[DEBUG][2017-07-13 16:17:34,242][org.hibernate.type.BasicTypeRegistry]Adding type registration timezone -> org.hibernate.type.TimeZoneType@4b6690c0
+[DEBUG][2017-07-13 16:17:34,242][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4b6690c0
+[DEBUG][2017-07-13 16:17:34,243][org.hibernate.type.BasicTypeRegistry]Adding type registration class -> org.hibernate.type.ClassType@7cf6a5f9
+[DEBUG][2017-07-13 16:17:34,243][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7cf6a5f9
+[DEBUG][2017-07-13 16:17:34,244][org.hibernate.type.BasicTypeRegistry]Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@67304a40
+[DEBUG][2017-07-13 16:17:34,244][org.hibernate.type.BasicTypeRegistry]Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@67304a40
+[DEBUG][2017-07-13 16:17:34,245][org.hibernate.type.BasicTypeRegistry]Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@79351f41
+[DEBUG][2017-07-13 16:17:34,245][org.hibernate.type.BasicTypeRegistry]Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5d5f10b2
+[DEBUG][2017-07-13 16:17:34,246][org.hibernate.type.BasicTypeRegistry]Adding type registration binary -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:17:34,246][org.hibernate.type.BasicTypeRegistry]Adding type registration byte[] -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:17:34,246][org.hibernate.type.BasicTypeRegistry]Adding type registration [B -> org.hibernate.type.BinaryType@3e30646a
+[DEBUG][2017-07-13 16:17:34,247][org.hibernate.type.BasicTypeRegistry]Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:17:34,248][org.hibernate.type.BasicTypeRegistry]Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:17:34,248][org.hibernate.type.BasicTypeRegistry]Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1199fe66
+[DEBUG][2017-07-13 16:17:34,248][org.hibernate.type.BasicTypeRegistry]Adding type registration image -> org.hibernate.type.ImageType@7d64e326
+[DEBUG][2017-07-13 16:17:34,249][org.hibernate.type.BasicTypeRegistry]Adding type registration characters -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:17:34,249][org.hibernate.type.BasicTypeRegistry]Adding type registration char[] -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:17:34,249][org.hibernate.type.BasicTypeRegistry]Adding type registration [C -> org.hibernate.type.CharArrayType@6b8d96d9
+[DEBUG][2017-07-13 16:17:34,250][org.hibernate.type.BasicTypeRegistry]Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:17:34,250][org.hibernate.type.BasicTypeRegistry]Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:17:34,250][org.hibernate.type.BasicTypeRegistry]Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@49d3c823
+[DEBUG][2017-07-13 16:17:34,251][org.hibernate.type.BasicTypeRegistry]Adding type registration text -> org.hibernate.type.TextType@66fdec9
+[DEBUG][2017-07-13 16:17:34,253][org.hibernate.type.BasicTypeRegistry]Adding type registration blob -> org.hibernate.type.BlobType@6ad59d92
+[DEBUG][2017-07-13 16:17:34,253][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@6ad59d92
+[DEBUG][2017-07-13 16:17:34,254][org.hibernate.type.BasicTypeRegistry]Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2cc44ad
+[DEBUG][2017-07-13 16:17:34,256][org.hibernate.type.BasicTypeRegistry]Adding type registration clob -> org.hibernate.type.ClobType@42721fe
+[DEBUG][2017-07-13 16:17:34,256][org.hibernate.type.BasicTypeRegistry]Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@42721fe
+[DEBUG][2017-07-13 16:17:34,256][org.hibernate.type.BasicTypeRegistry]Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@5b619d14
+[DEBUG][2017-07-13 16:17:34,257][org.hibernate.type.BasicTypeRegistry]Adding type registration serializable -> org.hibernate.type.SerializableType@6d23017e
+[DEBUG][2017-07-13 16:17:34,259][org.hibernate.type.BasicTypeRegistry]Adding type registration object -> org.hibernate.type.ObjectType@5669c5fb
+[DEBUG][2017-07-13 16:17:34,259][org.hibernate.type.BasicTypeRegistry]Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5669c5fb
+[DEBUG][2017-07-13 16:17:34,260][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@c4ed84
+[DEBUG][2017-07-13 16:17:34,260][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@189aa67a
+[DEBUG][2017-07-13 16:17:34,262][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5a9d6f02
+[DEBUG][2017-07-13 16:17:34,262][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@362045c0
+[DEBUG][2017-07-13 16:17:34,262][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@112f364d
+[DEBUG][2017-07-13 16:17:34,262][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5ccbeb64
+[DEBUG][2017-07-13 16:17:34,262][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6d9f7a80
+[DEBUG][2017-07-13 16:17:34,262][org.hibernate.type.BasicTypeRegistry]Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@59252cb6
+[INFO][2017-07-13 16:17:34,272][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2017-07-13 16:17:34,277][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2017-07-13 16:17:34,278][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2017-07-13 16:17:34,279][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2017-07-13 16:17:34,295][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Administrator.hbm.xml
+[INFO][2017-07-13 16:17:34,349][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Classroom.hbm.xml
+[INFO][2017-07-13 16:17:34,363][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Course.hbm.xml
+[INFO][2017-07-13 16:17:34,374][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Courseattendance.hbm.xml
+[INFO][2017-07-13 16:17:34,383][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Coursecategory.hbm.xml
+[INFO][2017-07-13 16:17:34,392][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Coursereservation.hbm.xml
+[INFO][2017-07-13 16:17:34,401][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Courseschedule.hbm.xml
+[INFO][2017-07-13 16:17:34,413][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Department.hbm.xml
+[INFO][2017-07-13 16:17:34,420][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Employee.hbm.xml
+[INFO][2017-07-13 16:17:34,440][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/EmployeeAccount.hbm.xml
+[INFO][2017-07-13 16:17:34,447][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Locker.hbm.xml
+[INFO][2017-07-13 16:17:34,453][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Member.hbm.xml
+[WARN][2017-07-13 16:17:34,455][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:17:34,462][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Memberaccount.hbm.xml
+[WARN][2017-07-13 16:17:34,468][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:17:34,472][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Memberloginlog.hbm.xml
+[WARN][2017-07-13 16:17:34,474][org.hibernate.internal.util.xml.DTDEntityResolver]HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[INFO][2017-07-13 16:17:34,477][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Position.hbm.xml
+[INFO][2017-07-13 16:17:34,483][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Product.hbm.xml
+[INFO][2017-07-13 16:17:34,494][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Teacher.hbm.xml
+[INFO][2017-07-13 16:17:34,499][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Yogaclub.hbm.xml
+[INFO][2017-07-13 16:17:34,504][org.hibernate.cfg.Configuration]HHH000220: Reading mappings from file: /Users/tonny/Documents/workspace-sts/SoulYogaAdmin/target/classes/hbm/Yogacushion.hbm.xml
+[INFO][2017-07-13 16:17:34,659][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> s4h3l99pgdkvir1gi4yp7|2d778add, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> s4h3l99pgdkvir1gi4yp7|2d778add, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/mysoulyoga, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[INFO][2017-07-13 16:17:34,953][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2017-07-13 16:17:34,957][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO][2017-07-13 16:17:34,962][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2017-07-13 16:17:34,965][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[TRACE][2017-07-13 16:17:34,976][org.hibernate.type.TypeFactory]Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@517bd097
+[INFO][2017-07-13 16:17:35,165][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2017-07-13 16:17:35,165][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2017-07-13 16:17:35,168][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2017-07-13 16:17:35,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.member
+[INFO][2017-07-13 16:17:35,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [birthday, salesconsultantid, address, modifiedtime, gender, avatarurl, identityid, name, id, mobileno, state, createdtime]
+[INFO][2017-07-13 16:17:35,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,184][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.memberaccount
+[INFO][2017-07-13 16:17:35,184][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [password, modifiedtime, nickname, fingerprint, id, state, createdtime, memberid]
+[INFO][2017-07-13 16:17:35,184][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,184][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,187][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.memberloginlog
+[INFO][2017-07-13 16:17:35,187][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, loginfo, id, state, createdtime, memberid, status]
+[INFO][2017-07-13 16:17:35,187][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,188][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,191][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.course
+[INFO][2017-07-13 16:17:35,191][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubid, modifiedtime, coursecategoryid, name, id, state, introduction, point, createdtime]
+[INFO][2017-07-13 16:17:35,191][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,191][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:17:35,196][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.coursecategory
+[INFO][2017-07-13 16:17:35,196][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, name, id, state, createdtime]
+[INFO][2017-07-13 16:17:35,196][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,196][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,200][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.courseschedule
+[INFO][2017-07-13 16:17:35,200][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [reservationendtime, classroomid, scheduledate, endtime, starttime, createdtime, teacherid, reservationstarttime, modifiedtime, checkinendtime, cancellationstarttime, id, state, courseid, cancellationendtime]
+[INFO][2017-07-13 16:17:35,200][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,200][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,201][java.sql.DatabaseMetaData]HHH000262: Table not found: Administrator
+[INFO][2017-07-13 16:17:35,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.classroom
+[INFO][2017-07-13 16:17:35,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [classroomno, yogacludid, modifiedtime, id, state, createdtime]
+[INFO][2017-07-13 16:17:35,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,207][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.courseattendance
+[INFO][2017-07-13 16:17:35,207][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, productpurchaseid, id, state, coursereservationid, checkintime, checkouttime, createdtime, memberid]
+[INFO][2017-07-13 16:17:35,207][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,207][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,210][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.coursereservation
+[INFO][2017-07-13 16:17:35,210][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubname, coursename, scheduledate, endtime, starttime, createdtime, classroomno, modifiedtime, teachername, id, coursescheduleid, state, memberid, yogacushionno, status]
+[INFO][2017-07-13 16:17:35,210][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,210][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,213][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.department
+[INFO][2017-07-13 16:17:35,213][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, name, id, state, createdtime]
+[INFO][2017-07-13 16:17:35,213][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,213][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,216][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.employee
+[INFO][2017-07-13 16:17:35,216][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [fristname, mail, gender, avatarurl, createdtime, lastname, yogaclubid, isteacher, modifiedtime, positionid, surname, identityid, name, id, state]
+[INFO][2017-07-13 16:17:35,216][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,217][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:17:35,220][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.employeeaccount
+[INFO][2017-07-13 16:17:35,220][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [password, modifiedtime, id, state, employeeid, createdtime, username]
+[INFO][2017-07-13 16:17:35,220][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,220][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-07-13 16:17:35,223][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.locker
+[INFO][2017-07-13 16:17:35,223][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [yogaclubid, modifiedtime, id, state, lockerno, createdtime, status]
+[INFO][2017-07-13 16:17:35,223][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,223][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,228][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.position
+[INFO][2017-07-13 16:17:35,228][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, departmentid, positionname, id, state, createdtime]
+[INFO][2017-07-13 16:17:35,228][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,228][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,232][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.product
+[INFO][2017-07-13 16:17:35,232][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [usingstarttime, modifiedtime, usingrestriction, price, name, count, activationcategory, cardcategoryid, usingendtime, id, state, createdtime]
+[INFO][2017-07-13 16:17:35,232][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,232][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,235][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.yogaclub
+[INFO][2017-07-13 16:17:35,235][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [address, modifiedtime, phone, city, name, id, state, linkman, createdtime]
+[INFO][2017-07-13 16:17:35,235][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,235][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,238][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.yogacushion
+[INFO][2017-07-13 16:17:35,238][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, classroomid, id, state, createdtime, yogacushionno]
+[INFO][2017-07-13 16:17:35,238][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,238][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,241][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: mysoulyoga.teacher
+[INFO][2017-07-13 16:17:35,241][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifiedtime, coursecategoryids, id, state, employeeid, introduction, createdtime]
+[INFO][2017-07-13 16:17:35,241][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-07-13 16:17:35,241][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [id, primary]
+[INFO][2017-07-13 16:17:35,242][java.sql.DatabaseMetaData]HHH000262: Table not found: Administrator
+[ERROR][2017-07-13 16:17:35,249][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000388: Unsuccessful: create table dbo.Administrator (admin_id integer not null auto_increment, admin_name varchar(50), password longtext, admin_status integer, primary key (admin_id))
+[ERROR][2017-07-13 16:17:35,249][org.hibernate.tool.hbm2ddl.SchemaUpdate]Unknown database 'dbo'
+[INFO][2017-07-13 16:17:35,249][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2017-07-13 16:17:35,398][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> s4h3l99pgdkvir1gi4yp7|2d778add, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> s4h3l99pgdkvir1gi4yp7|2d778add, idleConnectionTestPeriod -> 60, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/mysoulyoga, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 100, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[WARN][2017-07-13 16:17:35,570][org.hibernate.hql.internal.ast.HqlSqlWalker][DEPRECATION] Encountered positional parameter near line 1, column 114.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[DEBUG][2017-07-13 16:17:35,639][org.hibernate.SQL]select courseatte0_.ID as ID3_, courseatte0_.MemberID as MemberID3_, courseatte0_.CourseReservationID as CourseRe3_3_, courseatte0_.ProductPurchaseID as ProductP4_3_, courseatte0_.CheckInTime as CheckInT5_3_, courseatte0_.CheckOutTime as CheckOut6_3_, courseatte0_.CreatedTime as CreatedT7_3_, courseatte0_.ModifiedTime as Modified8_3_, courseatte0_.State as State3_ from mysoulyoga.courseattendance courseatte0_ where courseatte0_.State=0 and (courseatte0_.CheckOutTime is null) and courseatte0_.MemberID=?
+[TRACE][2017-07-13 16:17:35,650][org.hibernate.type.descriptor.sql.BasicBinder]binding parameter [1] as [INTEGER] - 27
+[TRACE][2017-07-13 16:17:35,670][org.hibernate.type.descriptor.sql.BasicExtractor]Found [13] as column [ID3_]
+[TRACE][2017-07-13 16:17:35,674][org.hibernate.type.descriptor.sql.BasicExtractor]Found [27] as column [MemberID3_]
+[TRACE][2017-07-13 16:17:35,674][org.hibernate.type.descriptor.sql.BasicExtractor]Found [1] as column [CourseRe3_3_]
+[TRACE][2017-07-13 16:17:35,674][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [ProductP4_3_]
+[TRACE][2017-07-13 16:17:35,680][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:00.0] as column [CheckInT5_3_]
+[TRACE][2017-07-13 16:17:35,680][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [CheckOut6_3_]
+[TRACE][2017-07-13 16:17:35,680][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:00.0] as column [CreatedT7_3_]
+[TRACE][2017-07-13 16:17:35,680][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [Modified8_3_]
+[TRACE][2017-07-13 16:17:35,680][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [State3_]
+[TRACE][2017-07-13 16:17:35,681][org.hibernate.type.descriptor.sql.BasicExtractor]Found [14] as column [ID3_]
+[TRACE][2017-07-13 16:17:35,681][org.hibernate.type.descriptor.sql.BasicExtractor]Found [27] as column [MemberID3_]
+[TRACE][2017-07-13 16:17:35,681][org.hibernate.type.descriptor.sql.BasicExtractor]Found [1] as column [CourseRe3_3_]
+[TRACE][2017-07-13 16:17:35,682][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [ProductP4_3_]
+[TRACE][2017-07-13 16:17:35,682][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:12.0] as column [CheckInT5_3_]
+[TRACE][2017-07-13 16:17:35,682][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [CheckOut6_3_]
+[TRACE][2017-07-13 16:17:35,682][org.hibernate.type.descriptor.sql.BasicExtractor]Found [2017-07-13 15:02:12.0] as column [CreatedT7_3_]
+[TRACE][2017-07-13 16:17:35,682][org.hibernate.type.descriptor.sql.BasicExtractor]Found [null] as column [Modified8_3_]
+[TRACE][2017-07-13 16:17:35,683][org.hibernate.type.descriptor.sql.BasicExtractor]Found [0] as column [State3_]
+[INFO][2017-07-13 16:17:35,695][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@598067a5: startup date [Thu Jul 13 16:17:28 CST 2017]; root of context hierarchy

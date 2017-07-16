@@ -16,7 +16,7 @@ public interface IYogaclubDao {
     public  List<Locker> getLockerbyYogaclub(int id );
     public void updateLocker(int id,int status);
     public void deleteLockerbyYogaclub(int id);
-    public int getPersonalLocker(String yogaclubname,int memberid);
-    public void changeLockerStatus(int lockerid,boolean flag);//flag 判断checkin或者checkout
+    public int getPersonalLocker(String yogaclubname,int memberid) throws Exception;
+    public void changeLockerStatus(int lockerid,boolean flag)throws Exception;//flag 判断checkin或者checkout
     public int getYogaclubIdbyName(String yogaclubname);
 }  

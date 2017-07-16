@@ -1,9 +1,12 @@
 package com.web.soulyogaadmin.member.service.impl;
 
+import java.io.InputStream;
 import java.util.List;
+import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import com.web.soulyogaadmin.entity.Employee;
 import com.web.soulyogaadmin.entity.Member;
@@ -54,7 +57,10 @@ public class MemberServiceImpl implements IMemberService {
 
 	@Override
 	public List<Employee> consultantList() throws Exception {
-		int positionId=1;
+		InputStream in=MemberServiceImpl.class.getClassLoader().getResourceAsStream("tableFieldConfig.properties");
+		Properties properties=new Properties();
+		properties.load(in);
+		int positionId=Integer.parseInt(properties.getProperty("consultantPositionId"));
 		return iMemberDao.consultantList(positionId);
 	}
 

@@ -37,16 +37,16 @@
 
       <form class="form-signin" action="userLogin.action" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Email address" name="userName" value="admin">
-        <input type="password" class="input-block-level" placeholder="Password" name="password" autocomplete="off" value="123456">
+        <input type="text" class="input-block-level" placeholder="Email address" name="userName" value="erwang">
+        <input type="password" class="input-block-level" placeholder="Password" name="password" autocomplete="off" value="111111">
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
-		  <a href="adminForgetpassword.jsp" style="float:right">Forget password?</a>
+		  <a href="./forgetPassword.action" style="float:right">Forget password?</a>
         </label>
 
         <button class="btn btn-large btn-primary" type="submit">Sign in</button>
       </form>
 
-    </div>
+    </div> <!-- /container -->
   </body>
 </html>

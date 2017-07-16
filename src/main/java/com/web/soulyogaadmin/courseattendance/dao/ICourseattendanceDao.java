@@ -12,9 +12,11 @@ public interface ICourseattendanceDao {
 	
 	void updateCourseattendance(Courseattendance courseattendance);
 	
+	Courseattendance getCourseattendance(int courseattendanceId);
+	
 	void delCourseattendance(Integer courseattendanceId);
 	 
-	List<Courseattendance> queryAllCourseattendance();
+	List<Courseattendance> queryAllCourseattendance(int memberId);
 	
 	Courseattendance queryBycourseattendanceId(Integer courseattendanceId);
 	
@@ -24,5 +26,6 @@ public interface ICourseattendanceDao {
 	
 	Courseattendance getCourseattendanceByCourseReservationId(int reservationId);
 	
+	Coursereservation getCoursereservationByCoursereservationId(int coursereservationId);
 
 }

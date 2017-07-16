@@ -2,7 +2,7 @@ package com.web.soulyogaadmin.vo;
 // Generated 2017-6-22 13:56:57 by Hibernate Tools 5.2.3.Final
 
 /**
- * Employee details for UI
+ * Employee details for Page
  * 
  * @author Comi Zhou
  * @version 2017-6-27
@@ -11,7 +11,8 @@ public class EmployeeView implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private int positionId;
+	private String phoneNo;
+	private Integer positionId;
 	private String positionName;
 	private String surname;
 	private String name;
@@ -21,20 +22,22 @@ public class EmployeeView implements java.io.Serializable {
 	private String identityId;
 	private Integer gender;
 	private String avatarUrl;
-	private int yogaClubId;
+	private Integer yogaClubId;
 	private String yogaClubName;
-	private int isTeacher;
+	private Integer isTeacher;
 	private String introduction;
 	private String courseCategoryIds;
 
 	public EmployeeView() {
 	}
 
-	public EmployeeView(Integer id, int positionId, String positionName, String surname, String name, String fristName,
-			String lastName, String mail, String identityId, Integer gender, String avatarUrl, int yogaClubId,
-			String yogaClubName, int isTeacher, String introduction, String courseCategoryIds) {
+	public EmployeeView(Integer id, String phoneNo, Integer positionId, String positionName, String surname,
+			String name, String fristName, String lastName, String mail, String identityId, Integer gender,
+			String avatarUrl, Integer yogaClubId, String yogaClubName, Integer isTeacher, String introduction,
+			String courseCategoryIds) {
 		super();
 		this.id = id;
+		this.phoneNo = phoneNo;
 		this.positionId = positionId;
 		this.positionName = positionName;
 		this.surname = surname;
@@ -52,14 +55,6 @@ public class EmployeeView implements java.io.Serializable {
 		this.courseCategoryIds = courseCategoryIds;
 	}
 
-	public int getIsTeacher() {
-		return isTeacher;
-	}
-
-	public void setIsTeacher(int isTeacher) {
-		this.isTeacher = isTeacher;
-	}
-
 	public Integer getId() {
 		return id;
 	}
@@ -68,11 +63,19 @@ public class EmployeeView implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public int getPositionId() {
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+
+	public Integer getPositionId() {
 		return positionId;
 	}
 
-	public void setPositionId(int positionId) {
+	public void setPositionId(Integer positionId) {
 		this.positionId = positionId;
 	}
 
@@ -148,11 +151,11 @@ public class EmployeeView implements java.io.Serializable {
 		this.avatarUrl = avatarUrl;
 	}
 
-	public int getYogaClubId() {
+	public Integer getYogaClubId() {
 		return yogaClubId;
 	}
 
-	public void setYogaClubId(int yogaClubId) {
+	public void setYogaClubId(Integer yogaClubId) {
 		this.yogaClubId = yogaClubId;
 	}
 
@@ -162,6 +165,14 @@ public class EmployeeView implements java.io.Serializable {
 
 	public void setYogaClubName(String yogaClubName) {
 		this.yogaClubName = yogaClubName;
+	}
+
+	public Integer getIsTeacher() {
+		return isTeacher;
+	}
+
+	public void setIsTeacher(Integer isTeacher) {
+		this.isTeacher = isTeacher;
 	}
 
 	public String getIntroduction() {
@@ -178,6 +189,15 @@ public class EmployeeView implements java.io.Serializable {
 
 	public void setCourseCategoryIds(String courseCategoryIds) {
 		this.courseCategoryIds = courseCategoryIds;
+	}
+
+	@Override
+	public String toString() {
+		return "EmployeeView [id=" + id + ", positionId=" + positionId + ", positionName=" + positionName + ", surname="
+				+ surname + ", name=" + name + ", fristName=" + fristName + ", lastName=" + lastName + ", mail=" + mail
+				+ ", identityId=" + identityId + ", gender=" + gender + ", avatarUrl=" + avatarUrl + ", yogaClubId="
+				+ yogaClubId + ", yogaClubName=" + yogaClubName + ", isTeacher=" + isTeacher + ", introduction="
+				+ introduction + ", courseCategoryIds=" + courseCategoryIds + "]";
 	}
 
 }

@@ -22,6 +22,7 @@
 	rel="stylesheet" type="text/css">
 <script type='text/javascript'>
 $(document).ready(function() {
+
 			$("#button").click(function() {
 				var mobileNo=$("#mobileNo").val();
 				var checkType=$("#checkType").val();
@@ -34,12 +35,9 @@ $(document).ready(function() {
 												checkType : checkType
 											},
 											success : function(result) {
-												console.log(result)
-												console.log(typeof result)
 												$("#list").html("");
 												$("#list").append(
 														"	<thead><tr>"
-														+"<th>批量操作</th>"
 														+"<th>课程名称</th>"
 														+"<th>所在教室</th>"
 														+"<th>上课时间</th>"
@@ -48,28 +46,90 @@ $(document).ready(function() {
 														+"	</tr></thead>"
 														)
 												$.each(result,function(i,item) {
-																	$("#list").append(
-																				" <tbody><tr> <td>"
-																							+ " "
-																							+ "</td><td>"
-																							+ item.courseName
-																							+ "</td><td>"
-																							+ item.classroomNo
-																							+ "</td><td>"
-																							+ item.startTime+"-"+item.endTime
-																							+ "</td><td>"
-																							+ item.checkInendTime
-																							+ "</td><td><a href='updatecourse.action?courseId="
-																							+ item.id
-																							+ " 'class='btn btn-success' onClick='return confirm('确认CheckIn？')'>CheckIn</a></td>"
-																							+ "</td> </tr> 	</tbody>")
+													if(typeof item.checkInTime=="undefined"){
+														$("#list").append(
+																" <tbody><tr> <td>"
+																          +"<input type='hidden' value='"+item.memberId+"' id='memberId'>"
+																          +"<input type='hidden' value='"+item.id+"' id='courseReservationId'>"
+																          +"<input type='hidden' value='"+item.yogaClubName+"' id='yogaclubname'>"
+																			+ item.courseName
+																			+ "</td><td>"
+																			+ item.classroomNo
+																			+ "</td><td>"
+																			+ item.startTime+"-"+item.endTime
+																			+ "</td><td>"
+																			+ item.checkInendTime
+																			+ "</td><td><input  type='button'  id='qqq' "
+																			+ " class='btn btn-success' onClick='return confirm('确认CheckIn？')' value='CheckIn'></td>"
+																			+ " </tr> 	</tbody>")
+													}else{
+														$("#list").append(
+																" <tbody><tr> <td>"
+																          +"<input type='hidden' value='"+item.memberId+"' id='memberId'>"
+																          +"<input type='hidden' value='"+item.courseattendanceId+"' id='courseattendanceId'>"
+																			+ item.courseName
+																			+ "</td><td>"
+																			+ item.classroomNo
+																			+ "</td><td>"
+																			+ item.startTime+"-"+item.endTime
+																			+ "</td><td>"
+																			+ "已CheckIn"
+																			+ "</td><td><input  type='button'  id='www' "
+																			+ " class='btn btn-success' onClick='return confirm('确认CheckOut？')' value='CheckOut'></td>"
+																			+ " </tr> 	</tbody>")
+													}
+													
 																})
 											}
 
 										});
 							})
+					       $("#list").on("click","#qqq", function() {  
+					    		var memberId=$("#list #memberId").val();
+					    		var courseReservationId=$("#list #courseReservationId").val();
+					    		var yogaclubname=$("#list #yogaclubname").val();
+					    	   $.ajax({
+									url : "checkin.action",
+									type : "post",
+									dataType : "json",
+									data : {
+										memberId : memberId,
+										courseReservationId : courseReservationId
+									},
+									success : function(result) {
+										}
+									});
+					    		$(this).removeClass().addClass("btn btn-info");
+		                    	$(this).val("已CheckIn");
+		                    	$(this).attr("disabled","disabled");
+			                
+							})
+							
+							    $("#list").on("click","#www", function() {  
+					    		var memberId=$("#list #memberId").val();
+					    		var courseattendanceId=$("#list #courseattendanceId").val();
+					    	   $.ajax({
+									url : "checkout.action",
+									type : "post",
+									dataType : "json",
+									data : {
+										memberId : memberId,
+										courseattendanceId : courseattendanceId
+									},
+									success : function(result) {
+										}
+									});
+					    		$(this).removeClass().addClass("btn btn-info");
+		                    	$(this).val("已CheckOut");
+		                    	$(this).attr("disabled","disabled");
+			                
+							})
+							
+                    })
+         
 
-		})
+		
+		
 </script>
 </head>
 
